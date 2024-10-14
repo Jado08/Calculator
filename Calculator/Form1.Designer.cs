@@ -60,6 +60,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(170)))), ((int)(((byte)(151)))));
             this.panel1.Controls.Add(this.lblCalculator);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnClose);
@@ -87,11 +88,11 @@
             // 
             // txtBoxDisplayRecent
             // 
-            this.txtBoxDisplayRecent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(225)))), ((int)(((byte)(221)))));
+            this.txtBoxDisplayRecent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(170)))), ((int)(((byte)(151)))));
             this.txtBoxDisplayRecent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDisplayRecent.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtBoxDisplayRecent.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txtBoxDisplayRecent.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtBoxDisplayRecent.ForeColor = System.Drawing.Color.DimGray;
             this.txtBoxDisplayRecent.Location = new System.Drawing.Point(0, 42);
             this.txtBoxDisplayRecent.Multiline = true;
             this.txtBoxDisplayRecent.Name = "txtBoxDisplayRecent";
@@ -102,7 +103,7 @@
             // 
             // txtBoxDisplay
             // 
-            this.txtBoxDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(225)))), ((int)(((byte)(221)))));
+            this.txtBoxDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(170)))), ((int)(((byte)(151)))));
             this.txtBoxDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDisplay.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtBoxDisplay.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
@@ -141,9 +142,9 @@
             // 
             // btnZero
             // 
-            this.btnZero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnZero.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnZero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnZero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnZero.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnZero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnZero.BorderRadius = 20;
             this.btnZero.BorderSize = 0;
             this.btnZero.FlatAppearance.BorderSize = 0;
@@ -161,9 +162,9 @@
             // 
             // btnDot
             // 
-            this.btnDot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnDot.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnDot.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnDot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnDot.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnDot.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnDot.BorderRadius = 20;
             this.btnDot.BorderSize = 0;
             this.btnDot.FlatAppearance.BorderSize = 0;
@@ -181,9 +182,9 @@
             // 
             // btnEqual
             // 
-            this.btnEqual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnEqual.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnEqual.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnEqual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnEqual.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnEqual.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnEqual.BorderRadius = 20;
             this.btnEqual.BorderSize = 0;
             this.btnEqual.FlatAppearance.BorderSize = 0;
@@ -201,9 +202,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnAdd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnAdd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnAdd.BorderRadius = 20;
             this.btnAdd.BorderSize = 0;
             this.btnAdd.FlatAppearance.BorderSize = 0;
@@ -221,9 +222,9 @@
             // 
             // btnThree
             // 
-            this.btnThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnThree.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnThree.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnThree.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnThree.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnThree.BorderRadius = 20;
             this.btnThree.BorderSize = 0;
             this.btnThree.FlatAppearance.BorderSize = 0;
@@ -241,9 +242,9 @@
             // 
             // btnTwo
             // 
-            this.btnTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnTwo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnTwo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnTwo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnTwo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnTwo.BorderRadius = 20;
             this.btnTwo.BorderSize = 0;
             this.btnTwo.FlatAppearance.BorderSize = 0;
@@ -261,9 +262,9 @@
             // 
             // btnOne
             // 
-            this.btnOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnOne.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnOne.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnOne.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnOne.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnOne.BorderRadius = 20;
             this.btnOne.BorderSize = 0;
             this.btnOne.FlatAppearance.BorderSize = 0;
@@ -281,9 +282,9 @@
             // 
             // btnSubtract
             // 
-            this.btnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnSubtract.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnSubtract.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnSubtract.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnSubtract.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnSubtract.BorderRadius = 20;
             this.btnSubtract.BorderSize = 0;
             this.btnSubtract.FlatAppearance.BorderSize = 0;
@@ -301,9 +302,9 @@
             // 
             // btnSix
             // 
-            this.btnSix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnSix.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnSix.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnSix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnSix.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnSix.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnSix.BorderRadius = 20;
             this.btnSix.BorderSize = 0;
             this.btnSix.FlatAppearance.BorderSize = 0;
@@ -321,9 +322,9 @@
             // 
             // btnFive
             // 
-            this.btnFive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnFive.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnFive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnFive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnFive.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnFive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnFive.BorderRadius = 20;
             this.btnFive.BorderSize = 0;
             this.btnFive.FlatAppearance.BorderSize = 0;
@@ -341,9 +342,9 @@
             // 
             // btnFour
             // 
-            this.btnFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnFour.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnFour.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnFour.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnFour.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnFour.BorderRadius = 20;
             this.btnFour.BorderSize = 0;
             this.btnFour.FlatAppearance.BorderSize = 0;
@@ -361,9 +362,9 @@
             // 
             // btnMultiply
             // 
-            this.btnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnMultiply.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnMultiply.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnMultiply.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnMultiply.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnMultiply.BorderRadius = 20;
             this.btnMultiply.BorderSize = 0;
             this.btnMultiply.FlatAppearance.BorderSize = 0;
@@ -381,9 +382,9 @@
             // 
             // btnNine
             // 
-            this.btnNine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnNine.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnNine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnNine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnNine.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnNine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnNine.BorderRadius = 20;
             this.btnNine.BorderSize = 0;
             this.btnNine.FlatAppearance.BorderSize = 0;
@@ -401,9 +402,9 @@
             // 
             // btnEight
             // 
-            this.btnEight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnEight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnEight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnEight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnEight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnEight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnEight.BorderRadius = 20;
             this.btnEight.BorderSize = 0;
             this.btnEight.FlatAppearance.BorderSize = 0;
@@ -421,9 +422,9 @@
             // 
             // btnSeven
             // 
-            this.btnSeven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnSeven.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnSeven.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnSeven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnSeven.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnSeven.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnSeven.BorderRadius = 20;
             this.btnSeven.BorderSize = 0;
             this.btnSeven.FlatAppearance.BorderSize = 0;
@@ -441,9 +442,9 @@
             // 
             // btnDivide
             // 
-            this.btnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnDivide.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnDivide.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnDivide.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnDivide.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnDivide.BorderRadius = 20;
             this.btnDivide.BorderSize = 0;
             this.btnDivide.FlatAppearance.BorderSize = 0;
@@ -461,9 +462,9 @@
             // 
             // btnAC
             // 
-            this.btnAC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnAC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnAC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnAC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnAC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnAC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnAC.BorderRadius = 20;
             this.btnAC.BorderSize = 0;
             this.btnAC.FlatAppearance.BorderSize = 0;
@@ -481,9 +482,9 @@
             // 
             // btnPlusMinus
             // 
-            this.btnPlusMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnPlusMinus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnPlusMinus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnPlusMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnPlusMinus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnPlusMinus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnPlusMinus.BorderRadius = 20;
             this.btnPlusMinus.BorderSize = 0;
             this.btnPlusMinus.FlatAppearance.BorderSize = 0;
@@ -501,9 +502,9 @@
             // 
             // btnPercentage
             // 
-            this.btnPercentage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnPercentage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnPercentage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnPercentage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnPercentage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnPercentage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnPercentage.BorderRadius = 20;
             this.btnPercentage.BorderSize = 0;
             this.btnPercentage.FlatAppearance.BorderSize = 0;
@@ -521,9 +522,9 @@
             // 
             // btnBackspace
             // 
-            this.btnBackspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnBackspace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
-            this.btnBackspace.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(241)))), ((int)(((byte)(238)))));
+            this.btnBackspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnBackspace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnBackspace.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
             this.btnBackspace.BorderRadius = 20;
             this.btnBackspace.BorderSize = 0;
             this.btnBackspace.FlatAppearance.BorderSize = 0;
@@ -542,7 +543,7 @@
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(225)))), ((int)(((byte)(221)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(170)))), ((int)(((byte)(151)))));
             this.ClientSize = new System.Drawing.Size(339, 506);
             this.Controls.Add(this.btnZero);
             this.Controls.Add(this.btnDot);
