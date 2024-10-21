@@ -135,6 +135,29 @@
         OYcc5AK3TmjZK61797PgNiU3Ks0LgiAQUloAfIoaG/dlr3oAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnClearHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAJlJREFUSEvt
+        kMEKgDAMQ+cve/Ao+uGiq1ioI2zrloPCHjzEQhJY+ANL9Cy4R+mgISQdNIKko8Xz/fdGbt3DWsC2CAox
+        rGIj+31cz5PB3aOBnmeSLHUYFaEbdVjvtgzdhDFchQbGsN5tGboJY7gKDYxhYX2+FnSjD9fSNewKJTR1
+        NIUSmjtssEc3UxQVeZSOZo4oKs0pmS8SwgXZVBvjs/lY6QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAjtJREFUSEu9
+        1ztoFEEcx/ETwQc+MaJGRVAwhaax0EZrsbGySbBJp2jjAxttxICVhY2gdiJYaKWNYmOhNoKaQBSDKD4T
+        RbAQFF+g3+/hHJd152Z3b5MffEhu2Zv/7GR2ZtKokLmYHzEHtWYBVmI1xvEn4ja8ZwXsSFdZhWF8hI1/
+        wFOMZTzDJ3jPaxxBD0rHnu/AVdjYE9zFABzubJbiALznBfzOWdjGMhTKWlyEX/ZpbmAbimY3/M5L2MYp
+        JItb9AL8wgh2Ipb+fz9j2Yvw9P65HJVo7K03PsYuL0SyFdexpfkpHouHJ9/shbyswxX4pJ2KmhP4CSdR
+        KoNwwp3DIi+0x2FwOOzZJS8kYuFfONr8lI6TzrYPY7YXQjZiAo+w3QuJlC3sCL7DW8zzQojjb4+cjUVS
+        trDxDbFGa3FZjod4AydDkVQpvA9fcN8P9iIsgw+wB6eRSpXCCzEJazWL+Yt+4DOmY3KFvEezsLM5FNYt
+        2LNUui5sevENd5C3DuflGGzAN8FZOuUV6ZAphavGoi4i7lhDKLIZ1FLYjf8ansPGHLE1iMVVqzW56sh6
+        jMIGb2ID8nIQrdeprmzCPXyF+3Be/ltA6kofziBvEYoumdOdsEkcQu4bYK9PIrUtlknHbTHEI477ceog
+        UDSFDgJmMY7DG1NHn1RKHX2M567z+I0ZO+yFuIx6IMgebz3gzUI2S7AfXR1v2+OB/jK+w8Z8Ckchq/1A
+        /woecSod6Nvj0zgCM/ovTDY1/NPWaPwFD0GzqgyDQPMAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnBackspace.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB0AAAAUCAYAAABxnDbHAAAABGdBTUEAALGPC/xhBQAAAURJREFUSEvN
@@ -146,4 +169,10 @@
         /C0T8Ehr9H0qY1jjP4ck+QOPGKZpPMFjYgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="ellipseForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    partial class Form1
+    partial class MainFunctions
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFunctions));
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblCalculator = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtBoxDisplayRecent = new System.Windows.Forms.TextBox();
             this.txtBoxDisplay = new System.Windows.Forms.TextBox();
+            this.pnlFooter = new System.Windows.Forms.Panel();
+            this.btnClearHistory = new CustomControls.RJControls.RJButton();
+            this.btnHistory = new CustomControls.RJControls.RJButton();
             this.btnLeftParenthesis = new CustomControls.RJControls.RJButton();
             this.btnEquals = new CustomControls.RJControls.RJButton();
             this.btnAddition = new CustomControls.RJControls.RJButton();
@@ -55,22 +58,24 @@
             this.btnBackspace = new CustomControls.RJControls.RJButton();
             this.btnAC = new CustomControls.RJControls.RJButton();
             this.btnRightParenthesis = new CustomControls.RJControls.RJButton();
-            this.Screen = new CustomControls.RJControls.RJButton();
-            this.panel1.SuspendLayout();
+            this.ellipseForm1 = new Calculator.EllipseForm();
+            this.txtBoxHistoryList = new System.Windows.Forms.TextBox();
+            this.pnlHeader.SuspendLayout();
+            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.panel1.Controls.Add(this.lblCalculator);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 42);
-            this.panel1.TabIndex = 0;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.pnlHeader.Controls.Add(this.lblCalculator);
+            this.pnlHeader.Controls.Add(this.button1);
+            this.pnlHeader.Controls.Add(this.btnClose);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(318, 42);
+            this.pnlHeader.TabIndex = 0;
             // 
             // lblCalculator
             // 
@@ -113,11 +118,11 @@
             // 
             // txtBoxDisplayRecent
             // 
-            this.txtBoxDisplayRecent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.txtBoxDisplayRecent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.txtBoxDisplayRecent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDisplayRecent.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtBoxDisplayRecent.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBoxDisplayRecent.Location = new System.Drawing.Point(27, 99);
+            this.txtBoxDisplayRecent.Location = new System.Drawing.Point(27, 89);
             this.txtBoxDisplayRecent.Multiline = true;
             this.txtBoxDisplayRecent.Name = "txtBoxDisplayRecent";
             this.txtBoxDisplayRecent.Size = new System.Drawing.Size(263, 29);
@@ -126,16 +131,70 @@
             // 
             // txtBoxDisplay
             // 
-            this.txtBoxDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.txtBoxDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.txtBoxDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDisplay.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
             this.txtBoxDisplay.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxDisplay.Location = new System.Drawing.Point(27, 134);
+            this.txtBoxDisplay.Location = new System.Drawing.Point(27, 124);
             this.txtBoxDisplay.Multiline = true;
             this.txtBoxDisplay.Name = "txtBoxDisplay";
             this.txtBoxDisplay.Size = new System.Drawing.Size(263, 55);
             this.txtBoxDisplay.TabIndex = 2;
             this.txtBoxDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.Controls.Add(this.txtBoxHistoryList);
+            this.pnlFooter.Controls.Add(this.btnClearHistory);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 523);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(315, 5);
+            this.pnlFooter.TabIndex = 0;
+            // 
+            // btnClearHistory
+            // 
+            this.btnClearHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearHistory.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnClearHistory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnClearHistory.BorderRadius = 27;
+            this.btnClearHistory.BorderSize = 0;
+            this.btnClearHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnClearHistory.FlatAppearance.BorderSize = 0;
+            this.btnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearHistory.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.btnClearHistory.ForeColor = System.Drawing.Color.Black;
+            this.btnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnClearHistory.Image")));
+            this.btnClearHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearHistory.Location = new System.Drawing.Point(0, -35);
+            this.btnClearHistory.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClearHistory.Name = "btnClearHistory";
+            this.btnClearHistory.Size = new System.Drawing.Size(315, 40);
+            this.btnClearHistory.TabIndex = 46;
+            this.btnClearHistory.TextColor = System.Drawing.Color.Black;
+            this.btnClearHistory.UseVisualStyleBackColor = false;
+            this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnHistory.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnHistory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnHistory.BorderRadius = 27;
+            this.btnHistory.BorderSize = 0;
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.btnHistory.ForeColor = System.Drawing.Color.Black;
+            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
+            this.btnHistory.Location = new System.Drawing.Point(268, 42);
+            this.btnHistory.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(47, 42);
+            this.btnHistory.TabIndex = 45;
+            this.btnHistory.TextColor = System.Drawing.Color.Black;
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnLeftParenthesis
             // 
@@ -146,9 +205,9 @@
             this.btnLeftParenthesis.BorderSize = 0;
             this.btnLeftParenthesis.FlatAppearance.BorderSize = 0;
             this.btnLeftParenthesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeftParenthesis.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnLeftParenthesis.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnLeftParenthesis.ForeColor = System.Drawing.Color.Black;
-            this.btnLeftParenthesis.Location = new System.Drawing.Point(26, 215);
+            this.btnLeftParenthesis.Location = new System.Drawing.Point(26, 197);
             this.btnLeftParenthesis.Margin = new System.Windows.Forms.Padding(0);
             this.btnLeftParenthesis.Name = "btnLeftParenthesis";
             this.btnLeftParenthesis.Size = new System.Drawing.Size(54, 56);
@@ -167,9 +226,9 @@
             this.btnEquals.BorderSize = 0;
             this.btnEquals.FlatAppearance.BorderSize = 0;
             this.btnEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEquals.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnEquals.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquals.ForeColor = System.Drawing.Color.Black;
-            this.btnEquals.Location = new System.Drawing.Point(165, 463);
+            this.btnEquals.Location = new System.Drawing.Point(165, 445);
             this.btnEquals.Margin = new System.Windows.Forms.Padding(0);
             this.btnEquals.Name = "btnEquals";
             this.btnEquals.Size = new System.Drawing.Size(54, 56);
@@ -188,9 +247,9 @@
             this.btnAddition.BorderSize = 0;
             this.btnAddition.FlatAppearance.BorderSize = 0;
             this.btnAddition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddition.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAddition.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddition.ForeColor = System.Drawing.Color.Black;
-            this.btnAddition.Location = new System.Drawing.Point(235, 463);
+            this.btnAddition.Location = new System.Drawing.Point(235, 445);
             this.btnAddition.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddition.Name = "btnAddition";
             this.btnAddition.Size = new System.Drawing.Size(54, 56);
@@ -209,9 +268,9 @@
             this.btnSubtract.BorderSize = 0;
             this.btnSubtract.FlatAppearance.BorderSize = 0;
             this.btnSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubtract.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSubtract.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtract.ForeColor = System.Drawing.Color.Black;
-            this.btnSubtract.Location = new System.Drawing.Point(235, 401);
+            this.btnSubtract.Location = new System.Drawing.Point(235, 383);
             this.btnSubtract.Margin = new System.Windows.Forms.Padding(0);
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(54, 56);
@@ -230,9 +289,9 @@
             this.btnMultiply.BorderSize = 0;
             this.btnMultiply.FlatAppearance.BorderSize = 0;
             this.btnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMultiply.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnMultiply.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.ForeColor = System.Drawing.Color.Black;
-            this.btnMultiply.Location = new System.Drawing.Point(235, 339);
+            this.btnMultiply.Location = new System.Drawing.Point(235, 321);
             this.btnMultiply.Margin = new System.Windows.Forms.Padding(0);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(54, 56);
@@ -251,9 +310,9 @@
             this.btnDivide.BorderSize = 0;
             this.btnDivide.FlatAppearance.BorderSize = 0;
             this.btnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDivide.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDivide.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivide.ForeColor = System.Drawing.Color.Black;
-            this.btnDivide.Location = new System.Drawing.Point(235, 277);
+            this.btnDivide.Location = new System.Drawing.Point(235, 259);
             this.btnDivide.Margin = new System.Windows.Forms.Padding(0);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(54, 56);
@@ -272,14 +331,14 @@
             this.btnDot.BorderSize = 1;
             this.btnDot.FlatAppearance.BorderSize = 0;
             this.btnDot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDot.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDot.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnDot.ForeColor = System.Drawing.Color.Black;
-            this.btnDot.Location = new System.Drawing.Point(95, 463);
+            this.btnDot.Location = new System.Drawing.Point(95, 445);
             this.btnDot.Margin = new System.Windows.Forms.Padding(0);
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(54, 56);
             this.btnDot.TabIndex = 37;
-            this.btnDot.Text = ".";
+            this.btnDot.Text = "0";
             this.btnDot.TextColor = System.Drawing.Color.Black;
             this.btnDot.UseVisualStyleBackColor = false;
             this.btnDot.Click += new System.EventHandler(this.NumberButton_Click);
@@ -293,14 +352,14 @@
             this.btnZero.BorderSize = 1;
             this.btnZero.FlatAppearance.BorderSize = 0;
             this.btnZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZero.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnZero.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnZero.ForeColor = System.Drawing.Color.Black;
-            this.btnZero.Location = new System.Drawing.Point(26, 463);
+            this.btnZero.Location = new System.Drawing.Point(26, 445);
             this.btnZero.Margin = new System.Windows.Forms.Padding(0);
             this.btnZero.Name = "btnZero";
             this.btnZero.Size = new System.Drawing.Size(54, 56);
             this.btnZero.TabIndex = 36;
-            this.btnZero.Text = "0";
+            this.btnZero.Text = ".";
             this.btnZero.TextColor = System.Drawing.Color.Black;
             this.btnZero.UseVisualStyleBackColor = false;
             this.btnZero.Click += new System.EventHandler(this.NumberButton_Click);
@@ -314,9 +373,9 @@
             this.btnThree.BorderSize = 1;
             this.btnThree.FlatAppearance.BorderSize = 0;
             this.btnThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThree.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnThree.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnThree.ForeColor = System.Drawing.Color.Black;
-            this.btnThree.Location = new System.Drawing.Point(165, 401);
+            this.btnThree.Location = new System.Drawing.Point(165, 383);
             this.btnThree.Margin = new System.Windows.Forms.Padding(0);
             this.btnThree.Name = "btnThree";
             this.btnThree.Size = new System.Drawing.Size(54, 56);
@@ -335,9 +394,9 @@
             this.btnTwo.BorderSize = 1;
             this.btnTwo.FlatAppearance.BorderSize = 0;
             this.btnTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnTwo.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnTwo.ForeColor = System.Drawing.Color.Black;
-            this.btnTwo.Location = new System.Drawing.Point(95, 401);
+            this.btnTwo.Location = new System.Drawing.Point(95, 383);
             this.btnTwo.Margin = new System.Windows.Forms.Padding(0);
             this.btnTwo.Name = "btnTwo";
             this.btnTwo.Size = new System.Drawing.Size(54, 56);
@@ -356,9 +415,9 @@
             this.btnOne.BorderSize = 1;
             this.btnOne.FlatAppearance.BorderSize = 0;
             this.btnOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOne.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnOne.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnOne.ForeColor = System.Drawing.Color.Black;
-            this.btnOne.Location = new System.Drawing.Point(26, 401);
+            this.btnOne.Location = new System.Drawing.Point(26, 383);
             this.btnOne.Margin = new System.Windows.Forms.Padding(0);
             this.btnOne.Name = "btnOne";
             this.btnOne.Size = new System.Drawing.Size(54, 56);
@@ -377,9 +436,9 @@
             this.btnSix.BorderSize = 1;
             this.btnSix.FlatAppearance.BorderSize = 0;
             this.btnSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSix.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSix.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnSix.ForeColor = System.Drawing.Color.Black;
-            this.btnSix.Location = new System.Drawing.Point(165, 339);
+            this.btnSix.Location = new System.Drawing.Point(165, 321);
             this.btnSix.Margin = new System.Windows.Forms.Padding(0);
             this.btnSix.Name = "btnSix";
             this.btnSix.Size = new System.Drawing.Size(54, 56);
@@ -398,9 +457,9 @@
             this.btnFive.BorderSize = 1;
             this.btnFive.FlatAppearance.BorderSize = 0;
             this.btnFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFive.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFive.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnFive.ForeColor = System.Drawing.Color.Black;
-            this.btnFive.Location = new System.Drawing.Point(95, 339);
+            this.btnFive.Location = new System.Drawing.Point(95, 321);
             this.btnFive.Margin = new System.Windows.Forms.Padding(0);
             this.btnFive.Name = "btnFive";
             this.btnFive.Size = new System.Drawing.Size(54, 56);
@@ -419,9 +478,9 @@
             this.btnFour.BorderSize = 1;
             this.btnFour.FlatAppearance.BorderSize = 0;
             this.btnFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFour.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFour.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnFour.ForeColor = System.Drawing.Color.Black;
-            this.btnFour.Location = new System.Drawing.Point(26, 339);
+            this.btnFour.Location = new System.Drawing.Point(26, 321);
             this.btnFour.Margin = new System.Windows.Forms.Padding(0);
             this.btnFour.Name = "btnFour";
             this.btnFour.Size = new System.Drawing.Size(54, 56);
@@ -440,9 +499,9 @@
             this.btnNine.BorderSize = 1;
             this.btnNine.FlatAppearance.BorderSize = 0;
             this.btnNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNine.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnNine.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnNine.ForeColor = System.Drawing.Color.Black;
-            this.btnNine.Location = new System.Drawing.Point(165, 277);
+            this.btnNine.Location = new System.Drawing.Point(165, 259);
             this.btnNine.Margin = new System.Windows.Forms.Padding(0);
             this.btnNine.Name = "btnNine";
             this.btnNine.Size = new System.Drawing.Size(54, 56);
@@ -461,9 +520,9 @@
             this.btnEight.BorderSize = 1;
             this.btnEight.FlatAppearance.BorderSize = 0;
             this.btnEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEight.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnEight.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnEight.ForeColor = System.Drawing.Color.Black;
-            this.btnEight.Location = new System.Drawing.Point(95, 277);
+            this.btnEight.Location = new System.Drawing.Point(95, 259);
             this.btnEight.Margin = new System.Windows.Forms.Padding(0);
             this.btnEight.Name = "btnEight";
             this.btnEight.Size = new System.Drawing.Size(54, 56);
@@ -482,9 +541,9 @@
             this.btnSeven.BorderSize = 1;
             this.btnSeven.FlatAppearance.BorderSize = 0;
             this.btnSeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeven.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSeven.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeven.ForeColor = System.Drawing.Color.Black;
-            this.btnSeven.Location = new System.Drawing.Point(26, 277);
+            this.btnSeven.Location = new System.Drawing.Point(26, 259);
             this.btnSeven.Margin = new System.Windows.Forms.Padding(0);
             this.btnSeven.Name = "btnSeven";
             this.btnSeven.Size = new System.Drawing.Size(54, 56);
@@ -503,10 +562,10 @@
             this.btnBackspace.BorderSize = 0;
             this.btnBackspace.FlatAppearance.BorderSize = 0;
             this.btnBackspace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackspace.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnBackspace.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnBackspace.ForeColor = System.Drawing.Color.Black;
             this.btnBackspace.Image = ((System.Drawing.Image)(resources.GetObject("btnBackspace.Image")));
-            this.btnBackspace.Location = new System.Drawing.Point(235, 215);
+            this.btnBackspace.Location = new System.Drawing.Point(235, 197);
             this.btnBackspace.Margin = new System.Windows.Forms.Padding(0);
             this.btnBackspace.Name = "btnBackspace";
             this.btnBackspace.Size = new System.Drawing.Size(54, 56);
@@ -524,9 +583,9 @@
             this.btnAC.BorderSize = 0;
             this.btnAC.FlatAppearance.BorderSize = 0;
             this.btnAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAC.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAC.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnAC.ForeColor = System.Drawing.Color.Black;
-            this.btnAC.Location = new System.Drawing.Point(165, 215);
+            this.btnAC.Location = new System.Drawing.Point(165, 197);
             this.btnAC.Margin = new System.Windows.Forms.Padding(0);
             this.btnAC.Name = "btnAC";
             this.btnAC.Size = new System.Drawing.Size(54, 56);
@@ -545,9 +604,9 @@
             this.btnRightParenthesis.BorderSize = 0;
             this.btnRightParenthesis.FlatAppearance.BorderSize = 0;
             this.btnRightParenthesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRightParenthesis.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnRightParenthesis.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnRightParenthesis.ForeColor = System.Drawing.Color.Black;
-            this.btnRightParenthesis.Location = new System.Drawing.Point(95, 215);
+            this.btnRightParenthesis.Location = new System.Drawing.Point(95, 197);
             this.btnRightParenthesis.Margin = new System.Windows.Forms.Padding(0);
             this.btnRightParenthesis.Name = "btnRightParenthesis";
             this.btnRightParenthesis.Size = new System.Drawing.Size(54, 56);
@@ -557,30 +616,33 @@
             this.btnRightParenthesis.UseVisualStyleBackColor = false;
             this.btnRightParenthesis.Click += new System.EventHandler(this.btnRightParenthesis_Click);
             // 
-            // Screen
+            // ellipseForm1
             // 
-            this.Screen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.Screen.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.Screen.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.Screen.BorderRadius = 20;
-            this.Screen.BorderSize = 3;
-            this.Screen.FlatAppearance.BorderSize = 0;
-            this.Screen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Screen.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.Screen.ForeColor = System.Drawing.Color.Black;
-            this.Screen.Location = new System.Drawing.Point(9, 50);
-            this.Screen.Margin = new System.Windows.Forms.Padding(0);
-            this.Screen.Name = "Screen";
-            this.Screen.Size = new System.Drawing.Size(299, 157);
-            this.Screen.TabIndex = 23;
-            this.Screen.TextColor = System.Drawing.Color.Black;
-            this.Screen.UseVisualStyleBackColor = false;
+            this.ellipseForm1.CornerRadius = 25;
+            this.ellipseForm1.targetControl = this;
             // 
-            // Form1
+            // txtBoxHistoryList
+            // 
+            this.txtBoxHistoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.txtBoxHistoryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxHistoryList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBoxHistoryList.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtBoxHistoryList.ForeColor = System.Drawing.Color.Silver;
+            this.txtBoxHistoryList.Location = new System.Drawing.Point(0, 0);
+            this.txtBoxHistoryList.Margin = new System.Windows.Forms.Padding(0);
+            this.txtBoxHistoryList.Multiline = true;
+            this.txtBoxHistoryList.Name = "txtBoxHistoryList";
+            this.txtBoxHistoryList.Size = new System.Drawing.Size(315, 0);
+            this.txtBoxHistoryList.TabIndex = 48;
+            this.txtBoxHistoryList.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // MainFunctions
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(318, 536);
+            this.ClientSize = new System.Drawing.Size(318, 537);
+            this.Controls.Add(this.pnlFooter);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnLeftParenthesis);
             this.Controls.Add(this.btnEquals);
             this.Controls.Add(this.btnAddition);
@@ -603,15 +665,16 @@
             this.Controls.Add(this.btnRightParenthesis);
             this.Controls.Add(this.txtBoxDisplayRecent);
             this.Controls.Add(this.txtBoxDisplay);
-            this.Controls.Add(this.Screen);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "MainFunctions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,13 +682,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtBoxDisplayRecent;
         private System.Windows.Forms.TextBox txtBoxDisplay;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblCalculator;
-        private CustomControls.RJControls.RJButton Screen;
         private CustomControls.RJControls.RJButton btnRightParenthesis;
         private CustomControls.RJControls.RJButton btnAC;
         private CustomControls.RJControls.RJButton btnBackspace;
@@ -646,6 +708,11 @@
         private CustomControls.RJControls.RJButton btnAddition;
         private CustomControls.RJControls.RJButton btnEquals;
         private CustomControls.RJControls.RJButton btnLeftParenthesis;
+        private EllipseForm ellipseForm1;
+        private CustomControls.RJControls.RJButton btnHistory;
+        private System.Windows.Forms.Panel pnlFooter;
+        private CustomControls.RJControls.RJButton btnClearHistory;
+        private System.Windows.Forms.TextBox txtBoxHistoryList;
     }
 }
 
