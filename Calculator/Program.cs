@@ -41,8 +41,29 @@ namespace Calculator
                 DataTable dt = new DataTable();
                 var result = dt.Compute(expression, "");
 
-                txtBoxDisplay.Text = result.ToString();  // Show the result in txtBoxDisplay
-                txtBoxDisplayRecent.Text += " =";  // Append only "=" in txtBoxDisplayRecent
+                string resultStr;
+
+                if (result is double doubleResult)
+                {
+                    // Check if the result is a whole number
+                    if (doubleResult == Math.Floor(doubleResult))
+                    {
+                        // If the result is a whole number, cast to an integer and show it without decimals
+                        resultStr = ((int)doubleResult).ToString();
+                    }
+                    else
+                    {
+                        // Otherwise, show the result with up to two decimal places
+                        resultStr = doubleResult.ToString("0.##");
+                    }
+                }
+                else
+                {
+                    resultStr = result.ToString(); // Fallback if the result is not a double
+                }
+
+                txtBoxDisplay.Text = resultStr; // Show the formatted result in txtBoxDisplay
+                txtBoxDisplayRecent.Text += " ="; // Append "=" in txtBoxDisplayRecent
             }
             catch (Exception ex)
             {
@@ -51,6 +72,7 @@ namespace Calculator
                 txtBoxDisplayRecent.Clear();
             }
         }
+
 
         public static bool AreParenthesesBalanced(string expression)
         {

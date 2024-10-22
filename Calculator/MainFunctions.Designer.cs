@@ -36,6 +36,7 @@
             this.txtBoxDisplayRecent = new System.Windows.Forms.TextBox();
             this.txtBoxDisplay = new System.Windows.Forms.TextBox();
             this.pnlFooter = new System.Windows.Forms.Panel();
+            this.txtBoxHistoryList = new System.Windows.Forms.TextBox();
             this.btnClearHistory = new CustomControls.RJControls.RJButton();
             this.btnHistory = new CustomControls.RJControls.RJButton();
             this.btnLeftParenthesis = new CustomControls.RJControls.RJButton();
@@ -59,7 +60,6 @@
             this.btnAC = new CustomControls.RJControls.RJButton();
             this.btnRightParenthesis = new CustomControls.RJControls.RJButton();
             this.ellipseForm1 = new Calculator.EllipseForm();
-            this.txtBoxHistoryList = new System.Windows.Forms.TextBox();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             this.lblCalculator.AutoSize = true;
             this.lblCalculator.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalculator.Location = new System.Drawing.Point(29, 13);
+            this.lblCalculator.Location = new System.Drawing.Point(29, 14);
             this.lblCalculator.Name = "lblCalculator";
             this.lblCalculator.Size = new System.Drawing.Size(98, 25);
             this.lblCalculator.TabIndex = 2;
@@ -138,7 +138,7 @@
             this.txtBoxDisplay.Location = new System.Drawing.Point(27, 124);
             this.txtBoxDisplay.Multiline = true;
             this.txtBoxDisplay.Name = "txtBoxDisplay";
-            this.txtBoxDisplay.Size = new System.Drawing.Size(263, 55);
+            this.txtBoxDisplay.Size = new System.Drawing.Size(263, 70);
             this.txtBoxDisplay.TabIndex = 2;
             this.txtBoxDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -146,11 +146,27 @@
             // 
             this.pnlFooter.Controls.Add(this.txtBoxHistoryList);
             this.pnlFooter.Controls.Add(this.btnClearHistory);
-            this.pnlFooter.Location = new System.Drawing.Point(0, 523);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 518);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(315, 5);
             this.pnlFooter.TabIndex = 0;
+            // 
+            // txtBoxHistoryList
+            // 
+            this.txtBoxHistoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.txtBoxHistoryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxHistoryList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBoxHistoryList.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtBoxHistoryList.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtBoxHistoryList.Location = new System.Drawing.Point(0, 0);
+            this.txtBoxHistoryList.Margin = new System.Windows.Forms.Padding(0);
+            this.txtBoxHistoryList.Multiline = true;
+            this.txtBoxHistoryList.Name = "txtBoxHistoryList";
+            this.txtBoxHistoryList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtBoxHistoryList.Size = new System.Drawing.Size(315, 0);
+            this.txtBoxHistoryList.TabIndex = 48;
+            this.txtBoxHistoryList.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnClearHistory
             // 
@@ -165,7 +181,7 @@
             this.btnClearHistory.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnClearHistory.ForeColor = System.Drawing.Color.Black;
             this.btnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnClearHistory.Image")));
-            this.btnClearHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearHistory.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnClearHistory.Location = new System.Drawing.Point(0, -35);
             this.btnClearHistory.Margin = new System.Windows.Forms.Padding(0);
             this.btnClearHistory.Name = "btnClearHistory";
@@ -620,21 +636,6 @@
             // 
             this.ellipseForm1.CornerRadius = 25;
             this.ellipseForm1.targetControl = this;
-            // 
-            // txtBoxHistoryList
-            // 
-            this.txtBoxHistoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.txtBoxHistoryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxHistoryList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoxHistoryList.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtBoxHistoryList.ForeColor = System.Drawing.Color.Silver;
-            this.txtBoxHistoryList.Location = new System.Drawing.Point(0, 0);
-            this.txtBoxHistoryList.Margin = new System.Windows.Forms.Padding(0);
-            this.txtBoxHistoryList.Multiline = true;
-            this.txtBoxHistoryList.Name = "txtBoxHistoryList";
-            this.txtBoxHistoryList.Size = new System.Drawing.Size(315, 0);
-            this.txtBoxHistoryList.TabIndex = 48;
-            this.txtBoxHistoryList.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // MainFunctions
             // 

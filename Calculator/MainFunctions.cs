@@ -14,7 +14,159 @@ namespace Calculator
         public MainFunctions()
         {
             InitializeComponent();
+            this.KeyPress += new KeyPressEventHandler(MainFunctions_KeyPress);
+            this.KeyPreview = true;
+
+            // Initialize txtBoxDisplay with "0" on load
+            txtBoxDisplay.Text = "0";
         }
+
+        private void MainFunctions_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Handle number inputs and decimal point
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == '.')
+            {
+                // If equals was clicked, start a new expression
+                if (isEqualsClicked)
+                {
+                    txtBoxDisplay.Clear();
+                    txtBoxDisplayRecent.Clear();
+                    isEqualsClicked = false;
+                }
+
+                // If an operator was clicked, clear the display for the new number input
+                if (isOperatorClicked)
+                {
+                    txtBoxDisplay.Clear();
+                    isOperatorClicked = false;
+                }
+
+                // Handle decimal point entry
+                if (e.KeyChar == '.')
+                {
+                    // If the display is empty, automatically start with "0."
+                    if (string.IsNullOrEmpty(txtBoxDisplay.Text))
+                    {
+                        txtBoxDisplay.Text = "0.";
+                    }
+                    // Only allow one decimal point in the current number
+                    else if (!txtBoxDisplay.Text.Contains("."))
+                    {
+                        txtBoxDisplay.Text += ".";
+                    }
+                    else
+                    {
+                        // Prevent entering multiple decimal points
+                        e.Handled = true;
+                        return;
+                    }
+                }
+                else
+                {
+                    // If display contains only "0", replace it with the new number
+                    if (txtBoxDisplay.Text == "0")
+                    {
+                        txtBoxDisplay.Text = "";  // Clear the "0" before adding numbers
+                    }
+
+                    // Add the digit to the display
+                    txtBoxDisplay.Text += e.KeyChar.ToString();
+                }
+
+                isNumberClicked = true;  // A number was clicked
+            }
+            // Handle operators: +, -, *, /
+            else if (e.KeyChar == '+' || e.KeyChar == '-' || e.KeyChar == '*' || e.KeyChar == '/')
+            {
+                // If the display contains "0." but no further numbers, treat it as "0"
+                if (txtBoxDisplay.Text == "0.")
+                {
+                    txtBoxDisplay.Text = "0";  // Convert "0." to "0" when operator is clicked
+                }
+
+                // If operator is clicked after equals, carry forward the result
+                if (isEqualsClicked)
+                {
+                    txtBoxDisplayRecent.Text = txtBoxDisplay.Text + " " + e.KeyChar + " ";
+                    isEqualsClicked = false;  // Reset equals flag for further inputs
+                }
+                // Change operator before entering the second number (via key press)
+                else if (isOperatorClicked)
+                {
+                    // Replace the operator in txtBoxDisplayRecent
+                    txtBoxDisplayRecent.Text = txtBoxDisplayRecent.Text.Substring(0, txtBoxDisplayRecent.Text.Length - 2) + e.KeyChar + " ";
+                }
+                else
+                {
+                    // Append the current number and operator to the recent display
+                    txtBoxDisplayRecent.Text += txtBoxDisplay.Text + " " + e.KeyChar + " ";
+                }
+
+                isOperatorClicked = true;  // Mark that an operator was clicked
+                isNumberClicked = false;   // Reset the number flag until a new number is clicked
+                txtBoxDisplay.Clear();     // Clear the display for the next input
+            }
+            // Handle Parentheses
+            else if (e.KeyChar == '(')
+            {
+                // If equals was clicked, start a new expression
+                if (isEqualsClicked)
+                {
+                    txtBoxDisplay.Clear();
+                    txtBoxDisplayRecent.Clear();
+                    isEqualsClicked = false;
+                }
+
+                // Append a space before the left parenthesis if there is a number already
+                if (!string.IsNullOrEmpty(txtBoxDisplay.Text) && !isOperatorClicked)
+                {
+                    txtBoxDisplayRecent.Text += txtBoxDisplay.Text + " (";
+                    txtBoxDisplay.Clear();  // Prepare for the next number input
+                }
+                else
+                {
+                    txtBoxDisplayRecent.Text += "(";  // Add just the parenthesis
+                }
+
+                isOperatorClicked = false;  // Reset operator flag since this is not an operator
+                isNumberClicked = false;    // Prepare for the next number
+            }
+            else if (e.KeyChar == ')')
+            {
+                // Only add the right parenthesis if there's an open parenthesis to match it
+                if (txtBoxDisplayRecent.Text.Contains("(") && !txtBoxDisplayRecent.Text.EndsWith("("))
+                {
+                    txtBoxDisplayRecent.Text += txtBoxDisplay.Text + ")";
+                    txtBoxDisplay.Clear();  // Clear the display to continue input
+                    isOperatorClicked = false;  // Reset operator flag
+                }
+            }
+            // Handle Equals key (=)
+            else if (e.KeyChar == '=')
+            {
+                btnEquals_Click(sender, e); // Trigger equals button click
+            }
+            // Handle Enter key (this is optional)
+            else if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnEquals_Click(sender, e); // Trigger equals button click
+            }
+            // Handle Backspace (Delete last character)
+            else if (e.KeyChar == (char)Keys.Back && txtBoxDisplay.Text.Length > 0)
+            {
+                txtBoxDisplay.Text = txtBoxDisplay.Text.Substring(0, txtBoxDisplay.Text.Length - 1);
+            }
+            // Handle "AC" (All Clear) key (mapped to 'Esc' or any custom key)
+            else if (e.KeyChar == (char)Keys.Escape ) // You can also choose another key for AC
+            {
+                btnAC_Click(sender, e); // Trigger AC button click
+                txtBoxDisplay.Text = "0";  // Reset to 0 on ESC key
+            }
+
+            // Prevent sound when the key is pressed
+            e.Handled = true;
+        }
+
 
         // Button: Close Application
         private void btnClose_Click(object sender, EventArgs e)
@@ -32,8 +184,19 @@ namespace Calculator
                 isEqualsClicked = false;
             }
 
-            txtBoxDisplayRecent.Text += "(";
+            // If there is a number already, append a space before the parenthesis
+            if (!string.IsNullOrEmpty(txtBoxDisplay.Text) && !isOperatorClicked)
+            {
+                txtBoxDisplayRecent.Text += txtBoxDisplay.Text + " (";
+                txtBoxDisplay.Clear();  // Prepare for the next number input
+            }
+            else
+            {
+                txtBoxDisplayRecent.Text += "(";  // Add just the parenthesis
+            }
+
             isOperatorClicked = false;  // Reset operator flag since this is not an operator
+            isNumberClicked = false;    // Prepare for the next number
         }
 
         // Button: Right Parenthesis - Just append, don't solve yet
@@ -64,33 +227,77 @@ namespace Calculator
                 isOperatorClicked = false;
             }
 
-            txtBoxDisplay.Text += btn.Text;
+            // If the display contains only the initial "0", replace it with the new number
+            if (txtBoxDisplay.Text == "0")
+            {
+                txtBoxDisplay.Clear();
+            }
+
+            // Handle the decimal point
+            if (btn.Text == ".")
+            {
+                // If the display is empty, start with "0."
+                if (string.IsNullOrEmpty(txtBoxDisplay.Text))
+                {
+                    txtBoxDisplay.Text = "0.";
+                }
+                // If the display doesn't already contain a decimal point, add it
+                else if (!txtBoxDisplay.Text.Contains("."))
+                {
+                    txtBoxDisplay.Text += ".";
+                }
+            }
+            else
+            {
+                // Add the number to the display
+                txtBoxDisplay.Text += btn.Text;
+            }
+
             isNumberClicked = true;  // A number was clicked
         }
+
 
         // Button: Operators (+, -, *, /)
         private void OperationButton_Click(object sender, EventArgs e)
         {
             RJButton btn = sender as RJButton;
 
-            // Ignore operator clicks if no number was clicked before
-            if (!isNumberClicked) return;
+            // If the display contains "0." but no further numbers, treat it as "0"
+            if (txtBoxDisplay.Text == "0.")
+            {
+                txtBoxDisplay.Text = "0";  // Convert "0." to "0" when operator is clicked
+            }
 
-            // If equals was clicked, start a new expression after the result
+            // Ignore operator clicks if no number was clicked before
+            if (string.IsNullOrEmpty(txtBoxDisplay.Text))
+            {
+                txtBoxDisplay.Text = "0";  // Ensure there's a valid "0" when operator is clicked after "."
+            }
+
+            // Handle continuous operation after equals
             if (isEqualsClicked)
             {
-                isEqualsClicked = false;
+                // Take the result from the previous operation and append it to txtBoxDisplayRecent
+                txtBoxDisplayRecent.Text = txtBoxDisplay.Text + " " + btn.Text + " ";
+                isEqualsClicked = false;  // Reset the equals flag for further inputs
+            }
+            // Change operator before entering second number
+            else if (isOperatorClicked)
+            {
+                // Change the operator in txtBoxDisplayRecent before the second number is entered
+                txtBoxDisplayRecent.Text = txtBoxDisplayRecent.Text.Substring(0, txtBoxDisplayRecent.Text.Length - 2) + btn.Text + " ";
+            }
+            else
+            {
+                // Normal operator input (first operator after number input)
+                txtBoxDisplayRecent.Text += txtBoxDisplay.Text + " " + btn.Text + " ";
             }
 
-            // Prevent consecutive operator clicks
-            if (!isOperatorClicked)
-            {
-                // Append the current number and operator to the recent display
-                txtBoxDisplayRecent.Text += txtBoxDisplay.Text + " " + btn.Text + " ";
-                isOperatorClicked = true;  // Mark that an operator was clicked
-                isNumberClicked = false;   // Reset the number flag until a new number is clicked
-            }
+            isOperatorClicked = true;  // Mark that an operator was clicked
+            isNumberClicked = false;   // Reset the number flag until a new number is clicked
+            txtBoxDisplay.Clear();     // Clear the display for the next input
         }
+
 
         // Button: Equals - Solve the expression
         private void btnEquals_Click(object sender, EventArgs e)
@@ -119,7 +326,7 @@ namespace Calculator
         // Button: AC (Clear All)
         private void btnAC_Click(object sender, EventArgs e)
         {
-            txtBoxDisplay.Clear();
+            txtBoxDisplay.Text = "0";  // Reset to 0 instead of clearing
             txtBoxDisplayRecent.Clear();
             isOperatorClicked = false;
             isEqualsClicked = false;
