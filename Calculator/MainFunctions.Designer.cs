@@ -120,6 +120,7 @@
             // 
             this.txtBoxDisplayRecent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.txtBoxDisplayRecent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxDisplayRecent.Enabled = false;
             this.txtBoxDisplayRecent.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtBoxDisplayRecent.ForeColor = System.Drawing.Color.DimGray;
             this.txtBoxDisplayRecent.Location = new System.Drawing.Point(27, 89);
@@ -133,6 +134,7 @@
             // 
             this.txtBoxDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.txtBoxDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxDisplay.Enabled = false;
             this.txtBoxDisplay.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
             this.txtBoxDisplay.ForeColor = System.Drawing.Color.Black;
             this.txtBoxDisplay.Location = new System.Drawing.Point(27, 124);
@@ -158,7 +160,7 @@
             this.txtBoxHistoryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxHistoryList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBoxHistoryList.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtBoxHistoryList.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtBoxHistoryList.ForeColor = System.Drawing.Color.Gray;
             this.txtBoxHistoryList.Location = new System.Drawing.Point(0, 0);
             this.txtBoxHistoryList.Margin = new System.Windows.Forms.Padding(0);
             this.txtBoxHistoryList.Multiline = true;
@@ -166,6 +168,7 @@
             this.txtBoxHistoryList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBoxHistoryList.Size = new System.Drawing.Size(315, 0);
             this.txtBoxHistoryList.TabIndex = 48;
+            this.txtBoxHistoryList.TabStop = false;
             this.txtBoxHistoryList.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnClearHistory
@@ -228,6 +231,7 @@
             this.btnLeftParenthesis.Name = "btnLeftParenthesis";
             this.btnLeftParenthesis.Size = new System.Drawing.Size(54, 56);
             this.btnLeftParenthesis.TabIndex = 44;
+            this.btnLeftParenthesis.TabStop = false;
             this.btnLeftParenthesis.Text = "(";
             this.btnLeftParenthesis.TextColor = System.Drawing.Color.Black;
             this.btnLeftParenthesis.UseVisualStyleBackColor = false;
@@ -249,6 +253,7 @@
             this.btnEquals.Name = "btnEquals";
             this.btnEquals.Size = new System.Drawing.Size(54, 56);
             this.btnEquals.TabIndex = 43;
+            this.btnEquals.TabStop = false;
             this.btnEquals.Text = "=";
             this.btnEquals.TextColor = System.Drawing.Color.Black;
             this.btnEquals.UseVisualStyleBackColor = false;
@@ -270,6 +275,7 @@
             this.btnAddition.Name = "btnAddition";
             this.btnAddition.Size = new System.Drawing.Size(54, 56);
             this.btnAddition.TabIndex = 42;
+            this.btnAddition.TabStop = false;
             this.btnAddition.Text = "+";
             this.btnAddition.TextColor = System.Drawing.Color.Black;
             this.btnAddition.UseVisualStyleBackColor = false;
@@ -291,6 +297,7 @@
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(54, 56);
             this.btnSubtract.TabIndex = 41;
+            this.btnSubtract.TabStop = false;
             this.btnSubtract.Text = "-";
             this.btnSubtract.TextColor = System.Drawing.Color.Black;
             this.btnSubtract.UseVisualStyleBackColor = false;
@@ -312,6 +319,7 @@
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(54, 56);
             this.btnMultiply.TabIndex = 40;
+            this.btnMultiply.TabStop = false;
             this.btnMultiply.Text = "*";
             this.btnMultiply.TextColor = System.Drawing.Color.Black;
             this.btnMultiply.UseVisualStyleBackColor = false;
@@ -333,6 +341,7 @@
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(54, 56);
             this.btnDivide.TabIndex = 39;
+            this.btnDivide.TabStop = false;
             this.btnDivide.Text = "/";
             this.btnDivide.TextColor = System.Drawing.Color.Black;
             this.btnDivide.UseVisualStyleBackColor = false;
@@ -354,6 +363,7 @@
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(54, 56);
             this.btnDot.TabIndex = 37;
+            this.btnDot.TabStop = false;
             this.btnDot.Text = "0";
             this.btnDot.TextColor = System.Drawing.Color.Black;
             this.btnDot.UseVisualStyleBackColor = false;
@@ -375,6 +385,7 @@
             this.btnZero.Name = "btnZero";
             this.btnZero.Size = new System.Drawing.Size(54, 56);
             this.btnZero.TabIndex = 36;
+            this.btnZero.TabStop = false;
             this.btnZero.Text = ".";
             this.btnZero.TextColor = System.Drawing.Color.Black;
             this.btnZero.UseVisualStyleBackColor = false;
@@ -396,6 +407,7 @@
             this.btnThree.Name = "btnThree";
             this.btnThree.Size = new System.Drawing.Size(54, 56);
             this.btnThree.TabIndex = 35;
+            this.btnThree.TabStop = false;
             this.btnThree.Text = "3";
             this.btnThree.TextColor = System.Drawing.Color.Black;
             this.btnThree.UseVisualStyleBackColor = false;
@@ -417,6 +429,7 @@
             this.btnTwo.Name = "btnTwo";
             this.btnTwo.Size = new System.Drawing.Size(54, 56);
             this.btnTwo.TabIndex = 34;
+            this.btnTwo.TabStop = false;
             this.btnTwo.Text = "2";
             this.btnTwo.TextColor = System.Drawing.Color.Black;
             this.btnTwo.UseVisualStyleBackColor = false;
@@ -438,6 +451,7 @@
             this.btnOne.Name = "btnOne";
             this.btnOne.Size = new System.Drawing.Size(54, 56);
             this.btnOne.TabIndex = 33;
+            this.btnOne.TabStop = false;
             this.btnOne.Text = "1";
             this.btnOne.TextColor = System.Drawing.Color.Black;
             this.btnOne.UseVisualStyleBackColor = false;
@@ -459,6 +473,7 @@
             this.btnSix.Name = "btnSix";
             this.btnSix.Size = new System.Drawing.Size(54, 56);
             this.btnSix.TabIndex = 32;
+            this.btnSix.TabStop = false;
             this.btnSix.Text = "6";
             this.btnSix.TextColor = System.Drawing.Color.Black;
             this.btnSix.UseVisualStyleBackColor = false;
@@ -480,6 +495,7 @@
             this.btnFive.Name = "btnFive";
             this.btnFive.Size = new System.Drawing.Size(54, 56);
             this.btnFive.TabIndex = 31;
+            this.btnFive.TabStop = false;
             this.btnFive.Text = "5";
             this.btnFive.TextColor = System.Drawing.Color.Black;
             this.btnFive.UseVisualStyleBackColor = false;
@@ -501,6 +517,7 @@
             this.btnFour.Name = "btnFour";
             this.btnFour.Size = new System.Drawing.Size(54, 56);
             this.btnFour.TabIndex = 30;
+            this.btnFour.TabStop = false;
             this.btnFour.Text = "4";
             this.btnFour.TextColor = System.Drawing.Color.Black;
             this.btnFour.UseVisualStyleBackColor = false;
@@ -522,6 +539,7 @@
             this.btnNine.Name = "btnNine";
             this.btnNine.Size = new System.Drawing.Size(54, 56);
             this.btnNine.TabIndex = 29;
+            this.btnNine.TabStop = false;
             this.btnNine.Text = "9";
             this.btnNine.TextColor = System.Drawing.Color.Black;
             this.btnNine.UseVisualStyleBackColor = false;
@@ -543,6 +561,7 @@
             this.btnEight.Name = "btnEight";
             this.btnEight.Size = new System.Drawing.Size(54, 56);
             this.btnEight.TabIndex = 28;
+            this.btnEight.TabStop = false;
             this.btnEight.Text = "8";
             this.btnEight.TextColor = System.Drawing.Color.Black;
             this.btnEight.UseVisualStyleBackColor = false;
@@ -564,6 +583,7 @@
             this.btnSeven.Name = "btnSeven";
             this.btnSeven.Size = new System.Drawing.Size(54, 56);
             this.btnSeven.TabIndex = 27;
+            this.btnSeven.TabStop = false;
             this.btnSeven.Text = "7";
             this.btnSeven.TextColor = System.Drawing.Color.Black;
             this.btnSeven.UseVisualStyleBackColor = false;
@@ -586,6 +606,7 @@
             this.btnBackspace.Name = "btnBackspace";
             this.btnBackspace.Size = new System.Drawing.Size(54, 56);
             this.btnBackspace.TabIndex = 26;
+            this.btnBackspace.TabStop = false;
             this.btnBackspace.TextColor = System.Drawing.Color.Black;
             this.btnBackspace.UseVisualStyleBackColor = false;
             this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
@@ -606,6 +627,7 @@
             this.btnAC.Name = "btnAC";
             this.btnAC.Size = new System.Drawing.Size(54, 56);
             this.btnAC.TabIndex = 25;
+            this.btnAC.TabStop = false;
             this.btnAC.Text = "AC";
             this.btnAC.TextColor = System.Drawing.Color.Black;
             this.btnAC.UseVisualStyleBackColor = false;
@@ -627,10 +649,11 @@
             this.btnRightParenthesis.Name = "btnRightParenthesis";
             this.btnRightParenthesis.Size = new System.Drawing.Size(54, 56);
             this.btnRightParenthesis.TabIndex = 24;
+            this.btnRightParenthesis.TabStop = false;
             this.btnRightParenthesis.Text = ")";
             this.btnRightParenthesis.TextColor = System.Drawing.Color.Black;
             this.btnRightParenthesis.UseVisualStyleBackColor = false;
-            this.btnRightParenthesis.Click += new System.EventHandler(this.btnRightParenthesis_Click);
+            this.btnRightParenthesis.Click += new System.EventHandler(this.btnRightParenthesis_Click_1);
             // 
             // ellipseForm1
             // 
