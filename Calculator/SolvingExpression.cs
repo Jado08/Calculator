@@ -16,13 +16,13 @@ namespace Calculator
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainFunctions());
         }
-        public static bool SolveExpression(TextBox txtBoxDisplay, TextBox txtBoxDisplayRecent)
+        public static bool SolveExpression(TextBox txtBoxDisplay, TextBox txtBoxDisplayRecent, out bool hasError)
         {
+            hasError = false;
             try
             {
                 string expression = txtBoxDisplayRecent.Text;
 
-                // Auto-close parentheses if unbalanced (if needed)
                 if (!AreParenthesesBalanced(expression))
                 {
                     int openCount = expression.Split('(').Length - 1;
@@ -34,19 +34,17 @@ namespace Calculator
                     }
                 }
 
-                // Check for division by zero or division by "zero-like" values such as 0.00, 0.000, etc.
                 if (IsDivisionByZero(expression))
                 {
-                    txtBoxDisplay.Text = "Cannot divide by zero";  // Show the error message in the display
-                    txtBoxDisplayRecent.Text += " =";  // Append '=' to make the expression complete
-                    return true;  // Return true to indicate division by zero occurred
+                    txtBoxDisplay.Text = "Cannot divide by zero";  
+                    txtBoxDisplayRecent.Text += " =";  
+                    hasError = true;  
+                    return true;  
                 }
 
-                // Evaluate the expression using DataTable
                 DataTable dt = new DataTable();
-                var result = dt.Compute(expression, "");  // Perform the calculation
+                var result = dt.Compute(expression, "");  
 
-                // Check if the result is infinity, which indicates division by zero
                 if (result.ToString() == "∞" || result.ToString() == "-∞")
                 {
                     txtBoxDisplay.Text = "Cannot divide by zero";
@@ -56,43 +54,39 @@ namespace Calculator
 
                 string resultStr;
 
-                // Convert result to string and parse to decimal
                 if (decimal.TryParse(result.ToString(), out decimal decimalResult))
                 {
-                    // Check if the result is a whole number
-                    if (decimalResult % 1 == 0) // If it's a whole number, remove decimal part
+                    if (decimalResult % 1 == 0) 
                     {
-                        resultStr = ((int)decimalResult).ToString(); // Convert to integer string
+                        resultStr = ((int)decimalResult).ToString();
                     }
                     else
                     {
-                        // Keep the original decimal part without unnecessary trailing zeros
-                        resultStr = decimalResult.ToString(); // Show full precision without forced formatting
+                        resultStr = decimalResult.ToString(); 
                     }
                 }
                 else
                 {
-                    resultStr = result.ToString(); // Fallback if parsing fails
+                    resultStr = result.ToString(); 
                 }
 
-                txtBoxDisplay.Text = resultStr;  // Show the result in the display
-                txtBoxDisplayRecent.Text += " =";  // Append '=' to the recent display
+                txtBoxDisplay.Text = resultStr; 
+                txtBoxDisplayRecent.Text += " =";  
 
-                return false; // No division by zero occurred
+                return false; 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                txtBoxDisplay.Text = "Invalid expression: " + ex.Message;
-                txtBoxDisplay.Clear();
-                txtBoxDisplayRecent.Clear();
-                return false; // No division by zero occurred due to exception
+                txtBoxDisplay.Text = "Exceeded maximum number limit";
+                txtBoxDisplayRecent.Text += " ="; 
+                hasError = true;  
+                return false; 
             }
+
         }
 
-        // Helper method to detect division by zero or zero-like values
         private static bool IsDivisionByZero(string expression)
         {
-            // Regex to match division by zero, including cases like "10 / 0", "10 / 0.0", "10 / 0.00", etc.
             return System.Text.RegularExpressions.Regex.IsMatch(expression, @"\/\s*(0(\.0*)?)");
         }
 
@@ -105,10 +99,10 @@ namespace Calculator
                 if (c == '(') balance++;
                 if (c == ')') balance--;
 
-                if (balance < 0) return false;  // Unmatched closing parenthesis
+                if (balance < 0) return false;  
             }
 
-            return balance == 0;  // Return true if balanced
+            return balance == 0;  
         }
     }
 }
