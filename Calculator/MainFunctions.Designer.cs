@@ -36,6 +36,7 @@
             this.txtBoxDisplayRecent = new System.Windows.Forms.TextBox();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.txtBoxHistoryList = new System.Windows.Forms.TextBox();
+            this.lblDisplay = new System.Windows.Forms.Label();
             this.btnClearHistory = new CustomControls.RJControls.RJButton();
             this.btnHistory = new CustomControls.RJControls.RJButton();
             this.btnLeftParenthesis = new CustomControls.RJControls.RJButton();
@@ -58,16 +59,37 @@
             this.btnBackspace = new CustomControls.RJControls.RJButton();
             this.btnAC = new CustomControls.RJControls.RJButton();
             this.btnRightParenthesis = new CustomControls.RJControls.RJButton();
+            this.ellipsePanelKeys = new Calculator.EllipsePanel();
+            this.rjButton19 = new CustomControls.RJControls.RJButton();
+            this.rjButton18 = new CustomControls.RJControls.RJButton();
+            this.rjButton17 = new CustomControls.RJControls.RJButton();
+            this.rjButton16 = new CustomControls.RJControls.RJButton();
+            this.rjButton15 = new CustomControls.RJControls.RJButton();
+            this.rjButton14 = new CustomControls.RJControls.RJButton();
+            this.rjButton13 = new CustomControls.RJControls.RJButton();
+            this.rjButton12 = new CustomControls.RJControls.RJButton();
+            this.rjButton11 = new CustomControls.RJControls.RJButton();
+            this.rjButton10 = new CustomControls.RJControls.RJButton();
+            this.rjButton9 = new CustomControls.RJControls.RJButton();
+            this.rjButton8 = new CustomControls.RJControls.RJButton();
+            this.rjButton7 = new CustomControls.RJControls.RJButton();
+            this.rjButton6 = new CustomControls.RJControls.RJButton();
+            this.rjButton5 = new CustomControls.RJControls.RJButton();
+            this.rjButton4 = new CustomControls.RJControls.RJButton();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.btnShadowLeftParenthesis = new CustomControls.RJControls.RJButton();
             this.ellipseForm1 = new Calculator.EllipseForm();
             this.ellipseFormPnlFooter = new Calculator.EllipseForm();
-            this.txtBoxDisplay = new System.Windows.Forms.TextBox();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
+            this.ellipsePanelKeys.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(143)))), ((int)(((byte)(10)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(213)))));
             this.pnlHeader.Controls.Add(this.lblCalculator);
             this.pnlHeader.Controls.Add(this.button1);
             this.pnlHeader.Controls.Add(this.btnClose);
@@ -120,31 +142,32 @@
             // 
             // txtBoxDisplayRecent
             // 
-            this.txtBoxDisplayRecent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.txtBoxDisplayRecent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(252)))), ((int)(((byte)(237)))));
             this.txtBoxDisplayRecent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDisplayRecent.Enabled = false;
             this.txtBoxDisplayRecent.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtBoxDisplayRecent.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBoxDisplayRecent.Location = new System.Drawing.Point(3, 84);
+            this.txtBoxDisplayRecent.Location = new System.Drawing.Point(12, 87);
             this.txtBoxDisplayRecent.Multiline = true;
             this.txtBoxDisplayRecent.Name = "txtBoxDisplayRecent";
-            this.txtBoxDisplayRecent.Size = new System.Drawing.Size(302, 24);
+            this.txtBoxDisplayRecent.Size = new System.Drawing.Size(293, 28);
             this.txtBoxDisplayRecent.TabIndex = 1;
             this.txtBoxDisplayRecent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pnlFooter
             // 
+            this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(230)))));
             this.pnlFooter.Controls.Add(this.txtBoxHistoryList);
             this.pnlFooter.Controls.Add(this.btnClearHistory);
             this.pnlFooter.Location = new System.Drawing.Point(3, 523);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(315, 5);
+            this.pnlFooter.Size = new System.Drawing.Size(315, 0);
             this.pnlFooter.TabIndex = 0;
             // 
             // txtBoxHistoryList
             // 
-            this.txtBoxHistoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.txtBoxHistoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(230)))));
             this.txtBoxHistoryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxHistoryList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBoxHistoryList.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -158,6 +181,17 @@
             this.txtBoxHistoryList.TabIndex = 49;
             this.txtBoxHistoryList.TabStop = false;
             this.txtBoxHistoryList.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblDisplay
+            // 
+            this.lblDisplay.Enabled = false;
+            this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblDisplay.ForeColor = System.Drawing.Color.Black;
+            this.lblDisplay.Location = new System.Drawing.Point(12, 114);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(293, 56);
+            this.lblDisplay.TabIndex = 47;
+            this.lblDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnClearHistory
             // 
@@ -173,7 +207,7 @@
             this.btnClearHistory.ForeColor = System.Drawing.Color.Black;
             this.btnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnClearHistory.Image")));
             this.btnClearHistory.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnClearHistory.Location = new System.Drawing.Point(0, -32);
+            this.btnClearHistory.Location = new System.Drawing.Point(0, -37);
             this.btnClearHistory.Margin = new System.Windows.Forms.Padding(0);
             this.btnClearHistory.Name = "btnClearHistory";
             this.btnClearHistory.Size = new System.Drawing.Size(315, 37);
@@ -205,10 +239,10 @@
             // 
             // btnLeftParenthesis
             // 
-            this.btnLeftParenthesis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
-            this.btnLeftParenthesis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnLeftParenthesis.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnLeftParenthesis.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.btnLeftParenthesis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnLeftParenthesis.BorderRadius = 34;
+            this.btnLeftParenthesis.BorderRadius = 33;
             this.btnLeftParenthesis.BorderSize = 0;
             this.btnLeftParenthesis.FlatAppearance.BorderSize = 0;
             this.btnLeftParenthesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -227,10 +261,10 @@
             // 
             // btnEquals
             // 
-            this.btnEquals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(130)))), ((int)(((byte)(9)))));
-            this.btnEquals.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(130)))), ((int)(((byte)(9)))));
+            this.btnEquals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(163)))));
+            this.btnEquals.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(163)))));
             this.btnEquals.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnEquals.BorderRadius = 34;
+            this.btnEquals.BorderRadius = 33;
             this.btnEquals.BorderSize = 0;
             this.btnEquals.FlatAppearance.BorderSize = 0;
             this.btnEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -249,10 +283,10 @@
             // 
             // btnAddition
             // 
-            this.btnAddition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
-            this.btnAddition.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
+            this.btnAddition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
+            this.btnAddition.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
             this.btnAddition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnAddition.BorderRadius = 34;
+            this.btnAddition.BorderRadius = 33;
             this.btnAddition.BorderSize = 0;
             this.btnAddition.FlatAppearance.BorderSize = 0;
             this.btnAddition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -271,10 +305,10 @@
             // 
             // btnSubtract
             // 
-            this.btnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
-            this.btnSubtract.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
+            this.btnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
+            this.btnSubtract.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
             this.btnSubtract.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnSubtract.BorderRadius = 34;
+            this.btnSubtract.BorderRadius = 33;
             this.btnSubtract.BorderSize = 0;
             this.btnSubtract.FlatAppearance.BorderSize = 0;
             this.btnSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -293,10 +327,10 @@
             // 
             // btnMultiply
             // 
-            this.btnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
-            this.btnMultiply.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
+            this.btnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
+            this.btnMultiply.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
             this.btnMultiply.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnMultiply.BorderRadius = 34;
+            this.btnMultiply.BorderRadius = 33;
             this.btnMultiply.BorderSize = 0;
             this.btnMultiply.FlatAppearance.BorderSize = 0;
             this.btnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -315,10 +349,10 @@
             // 
             // btnDivide
             // 
-            this.btnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
-            this.btnDivide.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
+            this.btnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
+            this.btnDivide.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(188)))));
             this.btnDivide.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnDivide.BorderRadius = 34;
+            this.btnDivide.BorderRadius = 33;
             this.btnDivide.BorderSize = 0;
             this.btnDivide.FlatAppearance.BorderSize = 0;
             this.btnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -337,11 +371,12 @@
             // 
             // btnDot
             // 
-            this.btnDot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnDot.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnDot.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnDot.BorderRadius = 34;
+            this.btnDot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnDot.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnDot.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnDot.BorderRadius = 33;
             this.btnDot.BorderSize = 0;
+            this.btnDot.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnDot.FlatAppearance.BorderSize = 0;
             this.btnDot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDot.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -359,11 +394,12 @@
             // 
             // btnZero
             // 
-            this.btnZero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnZero.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnZero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnZero.BorderRadius = 34;
+            this.btnZero.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnZero.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.btnZero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnZero.BorderRadius = 33;
             this.btnZero.BorderSize = 0;
+            this.btnZero.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnZero.FlatAppearance.BorderSize = 0;
             this.btnZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZero.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -381,11 +417,12 @@
             // 
             // btnThree
             // 
-            this.btnThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnThree.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnThree.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnThree.BorderRadius = 34;
+            this.btnThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnThree.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnThree.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnThree.BorderRadius = 33;
             this.btnThree.BorderSize = 0;
+            this.btnThree.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnThree.FlatAppearance.BorderSize = 0;
             this.btnThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThree.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -403,11 +440,12 @@
             // 
             // btnTwo
             // 
-            this.btnTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnTwo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnTwo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnTwo.BorderRadius = 34;
+            this.btnTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnTwo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnTwo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnTwo.BorderRadius = 33;
             this.btnTwo.BorderSize = 0;
+            this.btnTwo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnTwo.FlatAppearance.BorderSize = 0;
             this.btnTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTwo.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -425,11 +463,12 @@
             // 
             // btnOne
             // 
-            this.btnOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnOne.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnOne.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnOne.BorderRadius = 34;
+            this.btnOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnOne.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnOne.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnOne.BorderRadius = 33;
             this.btnOne.BorderSize = 0;
+            this.btnOne.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnOne.FlatAppearance.BorderSize = 0;
             this.btnOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOne.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -447,11 +486,12 @@
             // 
             // btnSix
             // 
-            this.btnSix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnSix.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnSix.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnSix.BorderRadius = 34;
+            this.btnSix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnSix.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnSix.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnSix.BorderRadius = 33;
             this.btnSix.BorderSize = 0;
+            this.btnSix.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnSix.FlatAppearance.BorderSize = 0;
             this.btnSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSix.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -469,11 +509,12 @@
             // 
             // btnFive
             // 
-            this.btnFive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnFive.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnFive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnFive.BorderRadius = 34;
+            this.btnFive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnFive.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnFive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnFive.BorderRadius = 33;
             this.btnFive.BorderSize = 0;
+            this.btnFive.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnFive.FlatAppearance.BorderSize = 0;
             this.btnFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFive.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -491,11 +532,12 @@
             // 
             // btnFour
             // 
-            this.btnFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnFour.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnFour.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnFour.BorderRadius = 34;
+            this.btnFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnFour.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnFour.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnFour.BorderRadius = 33;
             this.btnFour.BorderSize = 0;
+            this.btnFour.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnFour.FlatAppearance.BorderSize = 0;
             this.btnFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFour.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -513,11 +555,12 @@
             // 
             // btnNine
             // 
-            this.btnNine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnNine.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnNine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnNine.BorderRadius = 34;
+            this.btnNine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnNine.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnNine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnNine.BorderRadius = 33;
             this.btnNine.BorderSize = 0;
+            this.btnNine.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnNine.FlatAppearance.BorderSize = 0;
             this.btnNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNine.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -535,11 +578,12 @@
             // 
             // btnEight
             // 
-            this.btnEight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnEight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnEight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnEight.BorderRadius = 34;
+            this.btnEight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnEight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnEight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnEight.BorderRadius = 33;
             this.btnEight.BorderSize = 0;
+            this.btnEight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnEight.FlatAppearance.BorderSize = 0;
             this.btnEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEight.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -557,12 +601,12 @@
             // 
             // btnSeven
             // 
-            this.btnSeven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnSeven.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
-            this.btnSeven.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnSeven.BorderRadius = 34;
+            this.btnSeven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnSeven.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(210)))));
+            this.btnSeven.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnSeven.BorderRadius = 33;
             this.btnSeven.BorderSize = 0;
-            this.btnSeven.FlatAppearance.BorderSize = 0;
+            this.btnSeven.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnSeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeven.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeven.ForeColor = System.Drawing.Color.Black;
@@ -579,10 +623,10 @@
             // 
             // btnBackspace
             // 
-            this.btnBackspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
-            this.btnBackspace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnBackspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(178)))));
+            this.btnBackspace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(178)))));
             this.btnBackspace.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnBackspace.BorderRadius = 34;
+            this.btnBackspace.BorderRadius = 33;
             this.btnBackspace.BorderSize = 0;
             this.btnBackspace.FlatAppearance.BorderSize = 0;
             this.btnBackspace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -601,10 +645,10 @@
             // 
             // btnAC
             // 
-            this.btnAC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
-            this.btnAC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnAC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(178)))));
+            this.btnAC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(178)))));
             this.btnAC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnAC.BorderRadius = 34;
+            this.btnAC.BorderRadius = 33;
             this.btnAC.BorderSize = 0;
             this.btnAC.FlatAppearance.BorderSize = 0;
             this.btnAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -623,11 +667,12 @@
             // 
             // btnRightParenthesis
             // 
-            this.btnRightParenthesis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
-            this.btnRightParenthesis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
-            this.btnRightParenthesis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
-            this.btnRightParenthesis.BorderRadius = 34;
+            this.btnRightParenthesis.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnRightParenthesis.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.btnRightParenthesis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(220)))), ((int)(((byte)(190)))));
+            this.btnRightParenthesis.BorderRadius = 33;
             this.btnRightParenthesis.BorderSize = 0;
+            this.btnRightParenthesis.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
             this.btnRightParenthesis.FlatAppearance.BorderSize = 0;
             this.btnRightParenthesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRightParenthesis.Font = new System.Drawing.Font("Segoe UI", 16F);
@@ -641,7 +686,436 @@
             this.btnRightParenthesis.Text = ")";
             this.btnRightParenthesis.TextColor = System.Drawing.Color.Black;
             this.btnRightParenthesis.UseVisualStyleBackColor = false;
-            this.btnRightParenthesis.Click += new System.EventHandler(this.btnRightParenthesis_Click_1);
+            this.btnRightParenthesis.Click += new System.EventHandler(this.btnRightParenthesis_Click);
+            // 
+            // ellipsePanelKeys
+            // 
+            this.ellipsePanelKeys.BackColor = System.Drawing.Color.FloralWhite;
+            this.ellipsePanelKeys.Controls.Add(this.rjButton19);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton18);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton17);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton16);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton15);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton14);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton13);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton12);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton11);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton10);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton9);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton8);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton7);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton6);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton5);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton4);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton3);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton2);
+            this.ellipsePanelKeys.Controls.Add(this.rjButton1);
+            this.ellipsePanelKeys.Controls.Add(this.btnShadowLeftParenthesis);
+            this.ellipsePanelKeys.CornerRadius = 50;
+            this.ellipsePanelKeys.Location = new System.Drawing.Point(0, 166);
+            this.ellipsePanelKeys.Name = "ellipsePanelKeys";
+            this.ellipsePanelKeys.Size = new System.Drawing.Size(315, 373);
+            this.ellipsePanelKeys.TabIndex = 46;
+            // 
+            // rjButton19
+            // 
+            this.rjButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton19.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton19.BorderRadius = 33;
+            this.rjButton19.BorderSize = 0;
+            this.rjButton19.FlatAppearance.BorderSize = 0;
+            this.rjButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton19.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton19.ForeColor = System.Drawing.Color.Black;
+            this.rjButton19.Location = new System.Drawing.Point(242, 289);
+            this.rjButton19.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton19.Name = "rjButton19";
+            this.rjButton19.Size = new System.Drawing.Size(68, 68);
+            this.rjButton19.TabIndex = 67;
+            this.rjButton19.TabStop = false;
+            this.rjButton19.TextColor = System.Drawing.Color.Black;
+            this.rjButton19.UseVisualStyleBackColor = false;
+            // 
+            // rjButton18
+            // 
+            this.rjButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton18.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton18.BorderRadius = 33;
+            this.rjButton18.BorderSize = 0;
+            this.rjButton18.FlatAppearance.BorderSize = 0;
+            this.rjButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton18.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton18.ForeColor = System.Drawing.Color.Black;
+            this.rjButton18.Location = new System.Drawing.Point(166, 289);
+            this.rjButton18.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton18.Name = "rjButton18";
+            this.rjButton18.Size = new System.Drawing.Size(68, 68);
+            this.rjButton18.TabIndex = 66;
+            this.rjButton18.TabStop = false;
+            this.rjButton18.TextColor = System.Drawing.Color.Black;
+            this.rjButton18.UseVisualStyleBackColor = false;
+            // 
+            // rjButton17
+            // 
+            this.rjButton17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton17.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton17.BorderRadius = 33;
+            this.rjButton17.BorderSize = 0;
+            this.rjButton17.FlatAppearance.BorderSize = 0;
+            this.rjButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton17.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton17.ForeColor = System.Drawing.Color.Black;
+            this.rjButton17.Location = new System.Drawing.Point(90, 289);
+            this.rjButton17.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton17.Name = "rjButton17";
+            this.rjButton17.Size = new System.Drawing.Size(68, 68);
+            this.rjButton17.TabIndex = 65;
+            this.rjButton17.TabStop = false;
+            this.rjButton17.TextColor = System.Drawing.Color.Black;
+            this.rjButton17.UseVisualStyleBackColor = false;
+            // 
+            // rjButton16
+            // 
+            this.rjButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton16.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton16.BorderRadius = 33;
+            this.rjButton16.BorderSize = 0;
+            this.rjButton16.FlatAppearance.BorderSize = 0;
+            this.rjButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton16.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton16.ForeColor = System.Drawing.Color.Black;
+            this.rjButton16.Location = new System.Drawing.Point(13, 288);
+            this.rjButton16.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton16.Name = "rjButton16";
+            this.rjButton16.Size = new System.Drawing.Size(68, 68);
+            this.rjButton16.TabIndex = 64;
+            this.rjButton16.TabStop = false;
+            this.rjButton16.TextColor = System.Drawing.Color.Black;
+            this.rjButton16.UseVisualStyleBackColor = false;
+            // 
+            // rjButton15
+            // 
+            this.rjButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton15.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton15.BorderRadius = 33;
+            this.rjButton15.BorderSize = 0;
+            this.rjButton15.FlatAppearance.BorderSize = 0;
+            this.rjButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton15.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton15.ForeColor = System.Drawing.Color.Black;
+            this.rjButton15.Location = new System.Drawing.Point(242, 218);
+            this.rjButton15.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton15.Name = "rjButton15";
+            this.rjButton15.Size = new System.Drawing.Size(68, 68);
+            this.rjButton15.TabIndex = 63;
+            this.rjButton15.TabStop = false;
+            this.rjButton15.TextColor = System.Drawing.Color.Black;
+            this.rjButton15.UseVisualStyleBackColor = false;
+            // 
+            // rjButton14
+            // 
+            this.rjButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton14.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton14.BorderRadius = 33;
+            this.rjButton14.BorderSize = 0;
+            this.rjButton14.FlatAppearance.BorderSize = 0;
+            this.rjButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton14.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton14.ForeColor = System.Drawing.Color.Black;
+            this.rjButton14.Location = new System.Drawing.Point(166, 219);
+            this.rjButton14.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton14.Name = "rjButton14";
+            this.rjButton14.Size = new System.Drawing.Size(68, 68);
+            this.rjButton14.TabIndex = 62;
+            this.rjButton14.TabStop = false;
+            this.rjButton14.TextColor = System.Drawing.Color.Black;
+            this.rjButton14.UseVisualStyleBackColor = false;
+            // 
+            // rjButton13
+            // 
+            this.rjButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton13.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton13.BorderRadius = 33;
+            this.rjButton13.BorderSize = 0;
+            this.rjButton13.FlatAppearance.BorderSize = 0;
+            this.rjButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton13.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton13.ForeColor = System.Drawing.Color.Black;
+            this.rjButton13.Location = new System.Drawing.Point(90, 219);
+            this.rjButton13.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton13.Name = "rjButton13";
+            this.rjButton13.Size = new System.Drawing.Size(68, 68);
+            this.rjButton13.TabIndex = 61;
+            this.rjButton13.TabStop = false;
+            this.rjButton13.TextColor = System.Drawing.Color.Black;
+            this.rjButton13.UseVisualStyleBackColor = false;
+            // 
+            // rjButton12
+            // 
+            this.rjButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton12.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton12.BorderRadius = 33;
+            this.rjButton12.BorderSize = 0;
+            this.rjButton12.FlatAppearance.BorderSize = 0;
+            this.rjButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton12.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton12.ForeColor = System.Drawing.Color.Black;
+            this.rjButton12.Location = new System.Drawing.Point(14, 218);
+            this.rjButton12.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton12.Name = "rjButton12";
+            this.rjButton12.Size = new System.Drawing.Size(68, 68);
+            this.rjButton12.TabIndex = 60;
+            this.rjButton12.TabStop = false;
+            this.rjButton12.TextColor = System.Drawing.Color.Black;
+            this.rjButton12.UseVisualStyleBackColor = false;
+            // 
+            // rjButton11
+            // 
+            this.rjButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton11.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton11.BorderRadius = 33;
+            this.rjButton11.BorderSize = 0;
+            this.rjButton11.FlatAppearance.BorderSize = 0;
+            this.rjButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton11.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton11.ForeColor = System.Drawing.Color.Black;
+            this.rjButton11.Location = new System.Drawing.Point(242, 148);
+            this.rjButton11.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton11.Name = "rjButton11";
+            this.rjButton11.Size = new System.Drawing.Size(68, 68);
+            this.rjButton11.TabIndex = 59;
+            this.rjButton11.TabStop = false;
+            this.rjButton11.TextColor = System.Drawing.Color.Black;
+            this.rjButton11.UseVisualStyleBackColor = false;
+            // 
+            // rjButton10
+            // 
+            this.rjButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton10.BorderRadius = 33;
+            this.rjButton10.BorderSize = 0;
+            this.rjButton10.FlatAppearance.BorderSize = 0;
+            this.rjButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton10.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton10.ForeColor = System.Drawing.Color.Black;
+            this.rjButton10.Location = new System.Drawing.Point(165, 148);
+            this.rjButton10.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton10.Name = "rjButton10";
+            this.rjButton10.Size = new System.Drawing.Size(68, 68);
+            this.rjButton10.TabIndex = 58;
+            this.rjButton10.TabStop = false;
+            this.rjButton10.TextColor = System.Drawing.Color.Black;
+            this.rjButton10.UseVisualStyleBackColor = false;
+            // 
+            // rjButton9
+            // 
+            this.rjButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton9.BorderRadius = 33;
+            this.rjButton9.BorderSize = 0;
+            this.rjButton9.FlatAppearance.BorderSize = 0;
+            this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton9.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton9.ForeColor = System.Drawing.Color.Black;
+            this.rjButton9.Location = new System.Drawing.Point(89, 148);
+            this.rjButton9.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton9.Name = "rjButton9";
+            this.rjButton9.Size = new System.Drawing.Size(68, 68);
+            this.rjButton9.TabIndex = 57;
+            this.rjButton9.TabStop = false;
+            this.rjButton9.TextColor = System.Drawing.Color.Black;
+            this.rjButton9.UseVisualStyleBackColor = false;
+            // 
+            // rjButton8
+            // 
+            this.rjButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton8.BorderRadius = 33;
+            this.rjButton8.BorderSize = 0;
+            this.rjButton8.FlatAppearance.BorderSize = 0;
+            this.rjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton8.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton8.ForeColor = System.Drawing.Color.Black;
+            this.rjButton8.Location = new System.Drawing.Point(13, 148);
+            this.rjButton8.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton8.Name = "rjButton8";
+            this.rjButton8.Size = new System.Drawing.Size(68, 68);
+            this.rjButton8.TabIndex = 56;
+            this.rjButton8.TabStop = false;
+            this.rjButton8.TextColor = System.Drawing.Color.Black;
+            this.rjButton8.UseVisualStyleBackColor = false;
+            // 
+            // rjButton7
+            // 
+            this.rjButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton7.BorderRadius = 33;
+            this.rjButton7.BorderSize = 0;
+            this.rjButton7.FlatAppearance.BorderSize = 0;
+            this.rjButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton7.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton7.ForeColor = System.Drawing.Color.Black;
+            this.rjButton7.Location = new System.Drawing.Point(241, 77);
+            this.rjButton7.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton7.Name = "rjButton7";
+            this.rjButton7.Size = new System.Drawing.Size(68, 68);
+            this.rjButton7.TabIndex = 55;
+            this.rjButton7.TabStop = false;
+            this.rjButton7.TextColor = System.Drawing.Color.Black;
+            this.rjButton7.UseVisualStyleBackColor = false;
+            // 
+            // rjButton6
+            // 
+            this.rjButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton6.BorderRadius = 33;
+            this.rjButton6.BorderSize = 0;
+            this.rjButton6.FlatAppearance.BorderSize = 0;
+            this.rjButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton6.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton6.ForeColor = System.Drawing.Color.Black;
+            this.rjButton6.Location = new System.Drawing.Point(165, 78);
+            this.rjButton6.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton6.Name = "rjButton6";
+            this.rjButton6.Size = new System.Drawing.Size(68, 68);
+            this.rjButton6.TabIndex = 54;
+            this.rjButton6.TabStop = false;
+            this.rjButton6.TextColor = System.Drawing.Color.Black;
+            this.rjButton6.UseVisualStyleBackColor = false;
+            // 
+            // rjButton5
+            // 
+            this.rjButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton5.BorderRadius = 33;
+            this.rjButton5.BorderSize = 0;
+            this.rjButton5.FlatAppearance.BorderSize = 0;
+            this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton5.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton5.ForeColor = System.Drawing.Color.Black;
+            this.rjButton5.Location = new System.Drawing.Point(89, 78);
+            this.rjButton5.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton5.Name = "rjButton5";
+            this.rjButton5.Size = new System.Drawing.Size(68, 68);
+            this.rjButton5.TabIndex = 53;
+            this.rjButton5.TabStop = false;
+            this.rjButton5.TextColor = System.Drawing.Color.Black;
+            this.rjButton5.UseVisualStyleBackColor = false;
+            // 
+            // rjButton4
+            // 
+            this.rjButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton4.BorderRadius = 33;
+            this.rjButton4.BorderSize = 0;
+            this.rjButton4.FlatAppearance.BorderSize = 0;
+            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton4.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton4.ForeColor = System.Drawing.Color.Black;
+            this.rjButton4.Location = new System.Drawing.Point(13, 78);
+            this.rjButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton4.Name = "rjButton4";
+            this.rjButton4.Size = new System.Drawing.Size(68, 68);
+            this.rjButton4.TabIndex = 52;
+            this.rjButton4.TabStop = false;
+            this.rjButton4.TextColor = System.Drawing.Color.Black;
+            this.rjButton4.UseVisualStyleBackColor = false;
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton3.BorderRadius = 33;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton3.ForeColor = System.Drawing.Color.Black;
+            this.rjButton3.Location = new System.Drawing.Point(241, 8);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(68, 68);
+            this.rjButton3.TabIndex = 51;
+            this.rjButton3.TabStop = false;
+            this.rjButton3.TextColor = System.Drawing.Color.Black;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton2.BorderRadius = 33;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton2.ForeColor = System.Drawing.Color.Black;
+            this.rjButton2.Location = new System.Drawing.Point(165, 8);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(68, 68);
+            this.rjButton2.TabIndex = 50;
+            this.rjButton2.TabStop = false;
+            this.rjButton2.TextColor = System.Drawing.Color.Black;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.rjButton1.BorderRadius = 33;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.rjButton1.ForeColor = System.Drawing.Color.Black;
+            this.rjButton1.Location = new System.Drawing.Point(89, 8);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(68, 68);
+            this.rjButton1.TabIndex = 49;
+            this.rjButton1.TabStop = false;
+            this.rjButton1.TextColor = System.Drawing.Color.Black;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // btnShadowLeftParenthesis
+            // 
+            this.btnShadowLeftParenthesis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.btnShadowLeftParenthesis.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(181)))));
+            this.btnShadowLeftParenthesis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(212)))), ((int)(((byte)(203)))));
+            this.btnShadowLeftParenthesis.BorderRadius = 33;
+            this.btnShadowLeftParenthesis.BorderSize = 0;
+            this.btnShadowLeftParenthesis.FlatAppearance.BorderSize = 0;
+            this.btnShadowLeftParenthesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShadowLeftParenthesis.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.btnShadowLeftParenthesis.ForeColor = System.Drawing.Color.Black;
+            this.btnShadowLeftParenthesis.Location = new System.Drawing.Point(13, 8);
+            this.btnShadowLeftParenthesis.Margin = new System.Windows.Forms.Padding(0);
+            this.btnShadowLeftParenthesis.Name = "btnShadowLeftParenthesis";
+            this.btnShadowLeftParenthesis.Size = new System.Drawing.Size(68, 68);
+            this.btnShadowLeftParenthesis.TabIndex = 48;
+            this.btnShadowLeftParenthesis.TabStop = false;
+            this.btnShadowLeftParenthesis.TextColor = System.Drawing.Color.Black;
+            this.btnShadowLeftParenthesis.UseVisualStyleBackColor = false;
             // 
             // ellipseForm1
             // 
@@ -653,25 +1127,12 @@
             this.ellipseFormPnlFooter.CornerRadius = 25;
             this.ellipseFormPnlFooter.targetControl = this.pnlFooter;
             // 
-            // txtBoxDisplay
-            // 
-            this.txtBoxDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.txtBoxDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxDisplay.Enabled = false;
-            this.txtBoxDisplay.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
-            this.txtBoxDisplay.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxDisplay.Location = new System.Drawing.Point(3, 114);
-            this.txtBoxDisplay.Multiline = true;
-            this.txtBoxDisplay.Name = "txtBoxDisplay";
-            this.txtBoxDisplay.Size = new System.Drawing.Size(302, 56);
-            this.txtBoxDisplay.TabIndex = 2;
-            this.txtBoxDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // MainFunctions
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(252)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(318, 537);
+            this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnLeftParenthesis);
@@ -695,17 +1156,18 @@
             this.Controls.Add(this.btnAC);
             this.Controls.Add(this.btnRightParenthesis);
             this.Controls.Add(this.txtBoxDisplayRecent);
-            this.Controls.Add(this.txtBoxDisplay);
             this.Controls.Add(this.pnlHeader);
+            this.Controls.Add(this.ellipsePanelKeys);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainFunctions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Main";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
+            this.ellipsePanelKeys.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,7 +1206,28 @@
         private CustomControls.RJControls.RJButton btnClearHistory;
         private System.Windows.Forms.TextBox txtBoxHistoryList;
         private EllipseForm ellipseFormPnlFooter;
-        private System.Windows.Forms.TextBox txtBoxDisplay;
+        private EllipsePanel ellipsePanelKeys;
+        private System.Windows.Forms.Label lblDisplay;
+        private CustomControls.RJControls.RJButton btnShadowLeftParenthesis;
+        private CustomControls.RJControls.RJButton rjButton3;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton rjButton10;
+        private CustomControls.RJControls.RJButton rjButton9;
+        private CustomControls.RJControls.RJButton rjButton8;
+        private CustomControls.RJControls.RJButton rjButton7;
+        private CustomControls.RJControls.RJButton rjButton6;
+        private CustomControls.RJControls.RJButton rjButton5;
+        private CustomControls.RJControls.RJButton rjButton4;
+        private CustomControls.RJControls.RJButton rjButton19;
+        private CustomControls.RJControls.RJButton rjButton18;
+        private CustomControls.RJControls.RJButton rjButton17;
+        private CustomControls.RJControls.RJButton rjButton16;
+        private CustomControls.RJControls.RJButton rjButton15;
+        private CustomControls.RJControls.RJButton rjButton14;
+        private CustomControls.RJControls.RJButton rjButton13;
+        private CustomControls.RJControls.RJButton rjButton12;
+        private CustomControls.RJControls.RJButton rjButton11;
     }
 }
 

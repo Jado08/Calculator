@@ -102,6 +102,9 @@
     <Compile Include="EllipseForm.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EllipsePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MainFunctions.cs">
       <SubType>Form</SubType>
     </Compile>

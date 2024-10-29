@@ -13,6 +13,7 @@ namespace Calculator
         private string secondOperand = string.Empty;
         private string firstOperand = string.Empty;
         private string currentOperator = string.Empty;
+        private bool hasError = false;
 
         public MainFunctions()
         {
@@ -20,9 +21,10 @@ namespace Calculator
             this.KeyPress += new KeyPressEventHandler(MainFunctions_KeyPress);
             this.KeyPreview = true;
 
-            txtBoxDisplay.Text = "0";
+            lblDisplay.Text = "0";
         }
 
+        // mainfunctions for keypress ---------------------------------------------------------|
         private void MainFunctions_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar) || e.KeyChar == '.')
@@ -53,70 +55,92 @@ namespace Calculator
             {
                 btnAC_Click(sender, e);
             }
+            else if (e.KeyChar == 'h')
+            {
+                btnHistory_Click(sender, e);
+            }
 
             e.Handled = true;
         }
 
+        //refractor: NumberButton_Click and HandleNumberInput ----------------------------------|
         private void ProcessNumberInput(string input)
         {
             if (input == ".")
             {
                 if (isOperatorClicked)
                 {
-                    txtBoxDisplay.Text = "0.";
+                    lblDisplay.Text = "0.";
                     isOperatorClicked = false;
                 }
-                else if (string.IsNullOrEmpty(txtBoxDisplay.Text) || txtBoxDisplay.Text == "0")
+                else if (string.IsNullOrEmpty(lblDisplay.Text) || lblDisplay.Text == "0")
                 {
-                    txtBoxDisplay.Text = "0.";
+                    lblDisplay.Text = "0.";
                 }
-                else if (!txtBoxDisplay.Text.Contains("."))
+                else if (!lblDisplay.Text.Contains("."))
                 {
-                    txtBoxDisplay.Text += ".";
+                    lblDisplay.Text += ".";
                 }
                 return;
             }
 
             if (isEqualsClicked)
             {
-                txtBoxDisplay.Clear();
+                lblDisplay.Text = "";
                 txtBoxDisplayRecent.Clear();
                 isEqualsClicked = false;
             }
 
             if (isOperatorClicked)
             {
-                txtBoxDisplay.Clear();
+                lblDisplay.Text = "";
                 isOperatorClicked = false;
             }
 
-            if (txtBoxDisplay.Text == "0")
+            if (lblDisplay.Text == "0")
             {
-                txtBoxDisplay.Text = input; 
+                lblDisplay.Text = input;
             }
             else
             {
-                txtBoxDisplay.Text += input; 
+                lblDisplay.Text += input;
             }
 
-            isNumberClicked = true;  
+            isNumberClicked = true;
+        }
+        private void HandleNumberInput(KeyPressEventArgs e)
+        {
+            ProcessNumberInput(e.KeyChar.ToString());
+            e.Handled = true;
+        }
+        private void NumberButton_Click(object sender, EventArgs e)
+        {
+            RJButton btn = sender as RJButton;
+            ProcessNumberInput(btn.Text);
         }
 
+        //refractor: OperationButton_Click and HandleOperatorInput -----------------------------|
         private void ProcessOperatorInput(string input)
         {
-            if (txtBoxDisplay.Text == "0.")
+            if (hasError) return; // Block input on error
+            if (hasError) // Check for error state
             {
-                txtBoxDisplay.Text = "0";
+                return; // Do not process further if there's an error
             }
 
-            if (string.IsNullOrEmpty(txtBoxDisplay.Text))
+            if (lblDisplay.Text == "0.")
             {
-                return; 
+                lblDisplay.Text = "0";
+            }
+
+            if (string.IsNullOrEmpty(lblDisplay.Text))
+            {
+                return;
             }
 
             if (isEqualsClicked)
             {
-                txtBoxDisplayRecent.Text = txtBoxDisplay.Text + " " + input + " ";
+                txtBoxDisplayRecent.Text = lblDisplay.Text + " " + input + " ";
                 isEqualsClicked = false;
             }
             else if (isOperatorClicked)
@@ -125,200 +149,244 @@ namespace Calculator
             }
             else
             {
-                txtBoxDisplayRecent.Text += txtBoxDisplay.Text + " " + input + " ";
+                txtBoxDisplayRecent.Text += lblDisplay.Text + " " + input + " ";
             }
 
-            isOperatorClicked = true; 
-            isNumberClicked = false;   
-
-            
+            isOperatorClicked = true;
+            isNumberClicked = false;
         }
-
-        private void HandleNumberInput(KeyPressEventArgs e)
-        {
-            ProcessNumberInput(e.KeyChar.ToString());
-            e.Handled = true; 
-        }
-
         private void HandleOperatorInput(KeyPressEventArgs e)
         {
+            hasError = false;
             ProcessOperatorInput(e.KeyChar.ToString());
-            e.Handled = true; 
+            e.Handled = true;
         }
-
-        private void NumberButton_Click(object sender, EventArgs e)
-        {
-            RJButton btn = sender as RJButton;
-            ProcessNumberInput(btn.Text); 
-        }
-
         private void OperationButton_Click(object sender, EventArgs e)
         {
+            hasError = false;
             RJButton btn = sender as RJButton;
-            ProcessOperatorInput(btn.Text); 
+            ProcessOperatorInput(btn.Text);
         }
 
+        //refractor: HandleBackspace and HandLeftParenthesis -----------------------------------|
+        private void PerformBackspace()
+        {
+            if (lblDisplay.Text.Length > 0)
+            {
+                lblDisplay.Text = lblDisplay.Text.Substring(0, lblDisplay.Text.Length - 1);
+            }
+
+            // Reset lblDisplay to "0" if it becomes empty
+            if (string.IsNullOrEmpty(lblDisplay.Text))
+            {
+                lblDisplay.Text = "0";
+
+                // Clear txtBoxDisplayRecent when lblDisplay is reset to "0"
+                txtBoxDisplayRecent.Clear();
+            }
+        }
         private void HandleBackspace()
         {
-            if (txtBoxDisplay.Text.Length > 0)
-            {
-                txtBoxDisplay.Text = txtBoxDisplay.Text.Substring(0, txtBoxDisplay.Text.Length - 1);
-            }
+            PerformBackspace();
         }
-
-        private void HandleLeftParenthesis()
-        {
-            if (isEqualsClicked)
-            {
-                txtBoxDisplay.Clear();
-                txtBoxDisplayRecent.Clear();
-                isEqualsClicked = false;
-            }
-
-            if (txtBoxDisplay.Text == "0" || isOperatorClicked)
-            {
-                txtBoxDisplay.Clear(); 
-            }
-
-            txtBoxDisplayRecent.Text += "(";
-
-            isOperatorClicked = false;
-            isNumberClicked = false; 
-        }
-
-        private void HandleRightParenthesis()
-        {
-            if (txtBoxDisplayRecent.Text.Contains("(") && !txtBoxDisplayRecent.Text.EndsWith("("))
-            {
-                txtBoxDisplayRecent.Text += txtBoxDisplay.Text + ")"; 
-                txtBoxDisplay.Clear(); 
-                isOperatorClicked = false; 
-            }
-        }
-
-        private void btnLeftParenthesis_Click(object sender, EventArgs e)
-        {
-            if (isEqualsClicked)
-            {
-                txtBoxDisplay.Clear();
-                txtBoxDisplayRecent.Clear();
-                isEqualsClicked = false;
-            }
-
-            if (txtBoxDisplay.Text == "0")
-            {
-                txtBoxDisplay.Clear(); 
-            }
-
-            txtBoxDisplayRecent.Text += "(";
-
-            if (!string.IsNullOrEmpty(txtBoxDisplay.Text))
-            {
-                txtBoxDisplayRecent.Text = txtBoxDisplayRecent.Text.TrimEnd('(') + txtBoxDisplay.Text + " ("; // Move the text to the right place
-                txtBoxDisplay.Clear();  
-            }
-
-            isOperatorClicked = false; 
-            isNumberClicked = false;   
-        }
-
-        private void btnRightParenthesis_Click_1(object sender, EventArgs e)
-        {
-            txtBoxDisplayRecent.Text += txtBoxDisplay.Text + ")";
-            txtBoxDisplay.Clear();  
-            isOperatorClicked = false;  
-        }
-
         private void btnBackspace_Click(object sender, EventArgs e)
         {
-            if (txtBoxDisplay.Text.Length > 0)
-            {
-                txtBoxDisplay.Text = txtBoxDisplay.Text.Substring(0, txtBoxDisplay.Text.Length - 1);
-            }
+            PerformBackspace();
         }
 
+        //refractor: HandleLeftParenthesis and btnLeftParenthesis_Click ------------------------|
+        private void InsertLeftParenthesis()
+        {
+            if (hasError) return; // Block input on error
+
+            if (isEqualsClicked)
+            {
+                lblDisplay.Text = "";
+                txtBoxDisplayRecent.Clear();
+                isEqualsClicked = false;
+            }
+
+            // Clear '0' in display
+            if (lblDisplay.Text == "0")
+            {
+                lblDisplay.Text = "";
+            }
+
+            // Check the last character of the recent display text
+            string expression = txtBoxDisplayRecent.Text;
+            if (expression.Length > 0)
+            {
+                char lastChar = expression[expression.Length - 1];
+
+                // Only allow adding '(' if the last character is an operator, empty, or a closing parenthesis
+                if ("+-*/".Contains(lastChar) || lastChar == '(' || expression == "")
+                {
+                    txtBoxDisplayRecent.Text += "(";
+                }
+                else
+                {
+                    // If the last character is a number, just add the parenthesis after that
+                    txtBoxDisplayRecent.Text += "("; 
+                }
+            }
+            else
+            {
+                // If the expression is empty, just add the parenthesis
+                txtBoxDisplayRecent.Text += "(";
+            }
+            lblDisplay.Text = "0";
+            isOperatorClicked = false;
+            isNumberClicked = false;
+        }
+        private void HandleLeftParenthesis()
+        {
+            InsertLeftParenthesis();
+        }
+        private void btnLeftParenthesis_Click(object sender, EventArgs e)
+        {
+            InsertLeftParenthesis();
+        }
+
+        //refractor: HandleRightParenthesis and btnRightParenthesis_Click ----------------------|
+        private void InsertRightParenthesis()
+        {
+            if (hasError) return; // Block input on error
+            if (txtBoxDisplayRecent.Text.Contains("(") && !txtBoxDisplayRecent.Text.EndsWith("("))
+            {
+                txtBoxDisplayRecent.Text += lblDisplay.Text + ")";
+                lblDisplay.Text = "";
+                isOperatorClicked = false;
+            }
+        }
+        private void HandleRightParenthesis()
+        {
+            InsertRightParenthesis();
+        }
+        private void btnRightParenthesis_Click(object sender, EventArgs e)
+        {
+            InsertRightParenthesis();
+        }
+
+        // Equals (on-screen and keypress) -----------------------------------------------------|
         private void btnEquals_Click(object sender, EventArgs e)
         {
             if (!isEqualsClicked)
             {
+                // Set firstOperand if it is not yet set
                 if (string.IsNullOrEmpty(firstOperand))
                 {
-                    firstOperand = txtBoxDisplay.Text;
+                    firstOperand = lblDisplay.Text;
                 }
 
-                if (!string.IsNullOrEmpty(txtBoxDisplay.Text))
+                // Append current display text to the recent display (for full expression)
+                if (!string.IsNullOrEmpty(lblDisplay.Text))
                 {
-                    txtBoxDisplayRecent.Text += txtBoxDisplay.Text;
+                    txtBoxDisplayRecent.Text += lblDisplay.Text;
                 }
 
+                // Auto-complete operand if expression ends with an operator
                 string expression = txtBoxDisplayRecent.Text;
-                if (expression.Length > 0)
+                if (expression.Length > 0 && "+-*/".Contains(expression[expression.Length - 1]))
                 {
-                    char lastChar = expression[expression.Length - 1];
-
-                    if ("+-*/".Contains(lastChar))
-                    {
-                        txtBoxDisplayRecent.Text += $"{firstOperand} ";  
-                    }
+                    txtBoxDisplayRecent.Text += $"{firstOperand} ";
                 }
 
+                // Auto-close unbalanced parentheses
                 if (!SolvingExpression.AreParenthesesBalanced(expression))
                 {
-                    int openCount = expression.Split('(').Length - 1;
-                    int closeCount = expression.Split(')').Length - 1;
-                    while (openCount > closeCount)
-                    {
-                        txtBoxDisplayRecent.Text += ")"; 
-                        closeCount++;
-                    }
+                    int openCount = expression.Count(c => c == '(');
+                    int closeCount = expression.Count(c => c == ')');
+                    txtBoxDisplayRecent.Text += new string(')', openCount - closeCount);
                 }
 
-                bool hasError;
-                bool divisionByZero = SolvingExpression.SolveExpression(txtBoxDisplay, txtBoxDisplayRecent, out hasError);
+                // Attempt to solve the expression and handle errors
+                string errorMessage = string.Empty;
+                bool divisionByZero = SolvingExpression.SolveExpression(lblDisplay, txtBoxDisplayRecent, out hasError, out errorMessage);
 
+                if (hasError)
+                {
+                    lblDisplay.Text = errorMessage; // Show specific error message
+                    DisableAllButtons();
+                    return;
+                }
+
+                // Update history if calculation was successful
                 if (txtBoxHistoryList.Text == "There's no history yet.")
                 {
                     txtBoxHistoryList.Clear();
                 }
 
-                if (!hasError)
-                {
-                    txtBoxHistoryList.AppendText(txtBoxDisplayRecent.Text + Environment.NewLine);
-                    txtBoxHistoryList.AppendText(txtBoxDisplay.Text + Environment.NewLine + Environment.NewLine);  // Result on the next line
-                }
+                txtBoxHistoryList.AppendText(txtBoxDisplayRecent.Text + Environment.NewLine);
+                txtBoxHistoryList.AppendText(lblDisplay.Text + Environment.NewLine + Environment.NewLine);  // Result on the next line
 
-                isEqualsClicked = true; 
-                isOperatorClicked = false;  
+                isEqualsClicked = true;
+                isOperatorClicked = false;
             }
         }
 
-        private void btnAC_Click(object sender, EventArgs e)
+        //Disabling and Enabling in dividing any number by 0
+        private void DisableErrorButtons()
         {
-            txtBoxDisplay.Text = "0"; 
-            txtBoxDisplayRecent.Clear();
-            isOperatorClicked = false;
-            isEqualsClicked = false;
+            btnLeftParenthesis.Enabled = false; // Disable left parenthesis button
+            btnRightParenthesis.Enabled = false; // Disable right parenthesis button
+            btnEquals.Enabled = false;           // Disable equals button
+        }
+        private void DisableOperatorButtons()
+        {
+            btnAddition.Enabled = false;
+            btnSubtract.Enabled = false;
+            btnMultiply.Enabled = false;
+            btnDivide.Enabled = false;
+        }
+        private void DisableAllButtons()
+        {
+            DisableOperatorButtons();
+            DisableErrorButtons();
+        }
+        private void EnableOperatorButtons()
+        {
+            btnAddition.Enabled = true;  // Enable addition button
+            btnSubtract.Enabled = true;   // Enable subtract button
+            btnMultiply.Enabled = true;   // Enable multiply button
+            btnDivide.Enabled = true;     // Enable divide button
+        }
+        
+        private void EnableAllButtons()
+        {
+            EnableOperatorButtons();
+            btnLeftParenthesis.Enabled = true; // Re-enable left parenthesis button
+            btnRightParenthesis.Enabled = true; // Re-enable right parenthesis button
+            btnEquals.Enabled = true;           // Re-enable equals button
         }
 
+        // AC (All Clear - on screen and keypress) ---------------------------------------------| 
+        private void btnAC_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = "0";
+            txtBoxDisplayRecent.Text = "";
+            hasError = false; // Reset the error state
+            EnableAllButtons(); // Re-enable all buttons
+        }
+
+        // History -----------------------------------------------------------------------------|
         private void btnHistory_Click(object sender, EventArgs e)
         {
+            if (pnlFooter.Height == 0)
+            {
+                pnlFooter.Height = 350;
+                pnlFooter.Top -= (350 - 0);
+            }
+            else
+            {
+                pnlFooter.Top += (350 - 0);
+                pnlFooter.Height = 0;
+            }
+
             if (string.IsNullOrWhiteSpace(txtBoxHistoryList.Text))
             {
                 txtBoxHistoryList.Text = "There's no history yet.";
             }
-
-            if (pnlFooter.Height == 5)
-            {
-                pnlFooter.Height = 315;
-                pnlFooter.Top -= (315 - 5); 
-            }
-            else
-            {
-                pnlFooter.Top += (315 - 5); 
-                pnlFooter.Height = 5;
-            }
         }
-
         private void AddToHistory(string expression, string result, bool hasError)
         {
             if (!hasError)
@@ -326,16 +394,15 @@ namespace Calculator
                 txtBoxHistoryList.Text += $"{expression} = {result}\n";
             }
         }
-
         private void btnClearHistory_Click(object sender, EventArgs e)
         {
             txtBoxHistoryList.Clear();
         }
 
+        // Close the Application ---------------------------------------------------------------|
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
     }
 }

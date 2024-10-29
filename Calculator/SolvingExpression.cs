@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -16,93 +18,74 @@ namespace Calculator
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainFunctions());
         }
-        public static bool SolveExpression(TextBox txtBoxDisplay, TextBox txtBoxDisplayRecent, out bool hasError)
+        public static bool SolveExpression(Label lblDisplay, TextBox txtBoxDisplayRecent, out bool hasError, out string errorMessage)
         {
             hasError = false;
+            errorMessage = string.Empty;
+            string expression = txtBoxDisplayRecent.Text;
+            if (!AreParenthesesBalanced(expression))
+            {
+                int openCount = expression.Count(c => c == '(');
+                int closeCount = expression.Count(c => c == ')');
+                expression += new string(')', openCount - closeCount);
+            }
+
+            if (IsDivisionByZero(expression))
+            {
+                errorMessage = "Cannot divide by zero";
+                txtBoxDisplayRecent.Text += " =";
+                hasError = true;
+                return true;
+            }
+
             try
             {
-                string expression = txtBoxDisplayRecent.Text;
-
-                if (!AreParenthesesBalanced(expression))
-                {
-                    int openCount = expression.Split('(').Length - 1;
-                    int closeCount = expression.Split(')').Length - 1;
-                    while (openCount > closeCount)
-                    {
-                        expression += ")";
-                        closeCount++;
-                    }
-                }
-
-                if (IsDivisionByZero(expression))
-                {
-                    txtBoxDisplay.Text = "Cannot divide by zero";  
-                    txtBoxDisplayRecent.Text += " =";  
-                    hasError = true;  
-                    return true;  
-                }
-
                 DataTable dt = new DataTable();
-                var result = dt.Compute(expression, "");  
-
-                if (result.ToString() == "∞" || result.ToString() == "-∞")
-                {
-                    txtBoxDisplay.Text = "Cannot divide by zero";
-                    txtBoxDisplayRecent.Text += " =";
-                    return true;
-                }
-
-                string resultStr;
+                var result = dt.Compute(expression, "");
 
                 if (decimal.TryParse(result.ToString(), out decimal decimalResult))
                 {
-                    if (decimalResult % 1 == 0) 
+                    if (decimalResult > decimal.MaxValue || decimalResult < decimal.MinValue)
                     {
-                        resultStr = ((int)decimalResult).ToString();
+                        errorMessage = "Too large to compute";
+                        txtBoxDisplayRecent.Text += " =";
+                        hasError = true;
+                        return false;
                     }
-                    else
-                    {
-                        resultStr = decimalResult.ToString(); 
-                    }
+
+                    lblDisplay.Text = decimalResult % 1 == 0 ? ((int)decimalResult).ToString() : decimalResult.ToString();
                 }
                 else
                 {
-                    resultStr = result.ToString(); 
+                    lblDisplay.Text = result.ToString();
                 }
 
-                txtBoxDisplay.Text = resultStr; 
-                txtBoxDisplayRecent.Text += " =";  
-
-                return false; 
+                txtBoxDisplayRecent.Text += " =";
+                return false;
             }
-            catch (Exception)
+            catch
             {
-                txtBoxDisplay.Text = "Exceeded maximum number limit";
-                txtBoxDisplayRecent.Text += " ="; 
-                hasError = true;  
-                return false; 
+                errorMessage = "Too large to compute";
+                txtBoxDisplayRecent.Text += " =";
+                hasError = true;
+                return false;
             }
-
         }
-
         private static bool IsDivisionByZero(string expression)
-        {
+        { 
             return System.Text.RegularExpressions.Regex.IsMatch(expression, @"\/\s*(0(\.0*)?)");
         }
-
         public static bool AreParenthesesBalanced(string expression)
         {
             int balance = 0;
-
             foreach (char c in expression)
             {
                 if (c == '(') balance++;
                 if (c == ')') balance--;
 
-                if (balance < 0) return false;  
+                if (balance < 0) return false;
             }
-
-            return balance == 0;  
+            return balance == 0;
         }
     }
 }
