@@ -123,11 +123,6 @@ namespace Calculator
         private void ProcessOperatorInput(string input)
         {
             if (hasError) return; // Block input on error
-            if (hasError) // Check for error state
-            {
-                return; // Do not process further if there's an error
-            }
-
             if (lblDisplay.Text == "0.")
             {
                 lblDisplay.Text = "0";
@@ -157,13 +152,13 @@ namespace Calculator
         }
         private void HandleOperatorInput(KeyPressEventArgs e)
         {
-            hasError = false;
+            if (hasError) return; // Block input on error
             ProcessOperatorInput(e.KeyChar.ToString());
             e.Handled = true;
         }
         private void OperationButton_Click(object sender, EventArgs e)
         {
-            hasError = false;
+            if (hasError) return; // Block input on error
             RJButton btn = sender as RJButton;
             ProcessOperatorInput(btn.Text);
         }
@@ -325,38 +320,25 @@ namespace Calculator
         }
 
         //Disabling and Enabling in dividing any number by 0
-        private void DisableErrorButtons()
+        private void DisableAllButtons()
         {
-            btnLeftParenthesis.Enabled = false; // Disable left parenthesis button
-            btnRightParenthesis.Enabled = false; // Disable right parenthesis button
-            btnEquals.Enabled = false;           // Disable equals button
-        }
-        private void DisableOperatorButtons()
-        {
+            btnLeftParenthesis.Enabled = false; 
+            btnRightParenthesis.Enabled = false; 
+            btnEquals.Enabled = false;
             btnAddition.Enabled = false;
             btnSubtract.Enabled = false;
             btnMultiply.Enabled = false;
             btnDivide.Enabled = false;
         }
-        private void DisableAllButtons()
-        {
-            DisableOperatorButtons();
-            DisableErrorButtons();
-        }
-        private void EnableOperatorButtons()
-        {
-            btnAddition.Enabled = true;  // Enable addition button
-            btnSubtract.Enabled = true;   // Enable subtract button
-            btnMultiply.Enabled = true;   // Enable multiply button
-            btnDivide.Enabled = true;     // Enable divide button
-        }
-        
         private void EnableAllButtons()
         {
-            EnableOperatorButtons();
-            btnLeftParenthesis.Enabled = true; // Re-enable left parenthesis button
-            btnRightParenthesis.Enabled = true; // Re-enable right parenthesis button
-            btnEquals.Enabled = true;           // Re-enable equals button
+            btnAddition.Enabled = true;  
+            btnSubtract.Enabled = true;   
+            btnMultiply.Enabled = true;  
+            btnDivide.Enabled = true;    
+            btnLeftParenthesis.Enabled = true; 
+            btnRightParenthesis.Enabled = true; 
+            btnEquals.Enabled = true;           
         }
 
         // AC (All Clear - on screen and keypress) ---------------------------------------------| 

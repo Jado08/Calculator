@@ -185,7 +185,7 @@
             // lblDisplay
             // 
             this.lblDisplay.Enabled = false;
-            this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplay.ForeColor = System.Drawing.Color.Black;
             this.lblDisplay.Location = new System.Drawing.Point(12, 114);
             this.lblDisplay.Name = "lblDisplay";
