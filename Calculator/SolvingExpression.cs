@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+
 
 namespace Calculator
 {
@@ -72,7 +72,7 @@ namespace Calculator
             }
         }
         private static bool IsDivisionByZero(string expression)
-        { 
+        {
             return System.Text.RegularExpressions.Regex.IsMatch(expression, @"\/\s*(0(\.0*)?)");
         }
         public static bool AreParenthesesBalanced(string expression)

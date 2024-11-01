@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -113,6 +114,7 @@ namespace Calculator
             ProcessNumberInput(e.KeyChar.ToString());
             e.Handled = true;
         }
+
         private void NumberButton_Click(object sender, EventArgs e)
         {
             RJButton btn = sender as RJButton;
@@ -221,7 +223,7 @@ namespace Calculator
                 else
                 {
                     // If the last character is a number, just add the parenthesis after that
-                    txtBoxDisplayRecent.Text += "("; 
+                    txtBoxDisplayRecent.Text += "(";
                 }
             }
             else
@@ -322,8 +324,8 @@ namespace Calculator
         //Disabling and Enabling in dividing any number by 0
         private void DisableAllButtons()
         {
-            btnLeftParenthesis.Enabled = false; 
-            btnRightParenthesis.Enabled = false; 
+            btnLeftParenthesis.Enabled = false;
+            btnRightParenthesis.Enabled = false;
             btnEquals.Enabled = false;
             btnAddition.Enabled = false;
             btnSubtract.Enabled = false;
@@ -332,13 +334,13 @@ namespace Calculator
         }
         private void EnableAllButtons()
         {
-            btnAddition.Enabled = true;  
-            btnSubtract.Enabled = true;   
-            btnMultiply.Enabled = true;  
-            btnDivide.Enabled = true;    
-            btnLeftParenthesis.Enabled = true; 
-            btnRightParenthesis.Enabled = true; 
-            btnEquals.Enabled = true;           
+            btnAddition.Enabled = true;
+            btnSubtract.Enabled = true;
+            btnMultiply.Enabled = true;
+            btnDivide.Enabled = true;
+            btnLeftParenthesis.Enabled = true;
+            btnRightParenthesis.Enabled = true;
+            btnEquals.Enabled = true;
         }
 
         // AC (All Clear - on screen and keypress) ---------------------------------------------| 
@@ -386,5 +388,8 @@ namespace Calculator
         {
             Application.Exit();
         }
+
+        
+
     }
 }
