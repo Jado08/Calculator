@@ -25,9 +25,26 @@ namespace Calculator
             lblDisplay.Text = "0";
         }
 
+        private async void HighlightButton(RJButton button)
+        {
+            var originalColor = button.BackColor; // Store the original color
+            button.BackColor = System.Drawing.Color.Yellow;
+
+            // Delay to show the yellow highlight momentarily
+            await Task.Delay(100); // Adjust the delay as desired
+
+            button.BackColor = originalColor; // Revert to the original color
+        }
+
         // mainfunctions for keypress ---------------------------------------------------------|
         private void MainFunctions_KeyPress(object sender, KeyPressEventArgs e)
         {
+            RJButton btn = GetButtonForKey(e.KeyChar);
+            if (btn != null)
+            {
+                HighlightButton(btn);  // Highlight the corresponding button
+            }
+
             if (char.IsDigit(e.KeyChar) || e.KeyChar == '.')
             {
                 HandleNumberInput(e);
@@ -64,51 +81,101 @@ namespace Calculator
             e.Handled = true;
         }
 
+        private RJButton GetButtonForKey(char keyChar)
+        {
+            switch (keyChar)
+            {
+                case '0': return btnZero;
+                case '1': return btnOne;
+                case '2': return btnTwo;
+                case '3': return btnThree;
+                case '4': return btnFour;
+                case '5': return btnFive;
+                case '6': return btnSix;
+                case '7': return btnSeven;
+                case '8': return btnEight;
+                case '9': return btnNine;
+                case '+': return btnAddition;
+                case '-': return btnSubtract;
+                case '*': return btnMultiply;
+                case '/': return btnDivide;
+                case '=': return btnEquals;
+                case '.': return btnDot;
+                case '(': return btnLeftParenthesis;
+                case ')': return btnRightParenthesis;
+                case (char)Keys.Back: return btnBackspace;    
+                case (char)Keys.Escape: return btnAC;  
+                default: return null;
+            }
+        }
+
         //refractor: NumberButton_Click and HandleNumberInput ----------------------------------|
         private void ProcessNumberInput(string input)
         {
+            // If there's an error displayed, reset everything on a new number input
+            if (hasError)
+            {
+                lblDisplay.Text = "";           // Reset lblDisplay
+                txtBoxDisplayRecent.Clear();     // Clear the recent display
+                hasError = false;                // Clear error state
+                EnableAllButtons();              // Enable all buttons
+            }
+
+            // If decimal is pressed
             if (input == ".")
             {
+                if (isEqualsClicked)
+                {
+                    // Reset display and recent display to "0." after equals
+                    lblDisplay.Text = "0.";
+                    txtBoxDisplayRecent.Clear();  // Clear txtBoxDisplayRecent for new calculation
+                    isEqualsClicked = false;
+                    return;
+                }
                 if (isOperatorClicked)
                 {
+                    // Reset display to "0." after operator
                     lblDisplay.Text = "0.";
                     isOperatorClicked = false;
+                    return;
                 }
-                else if (string.IsNullOrEmpty(lblDisplay.Text) || lblDisplay.Text == "0")
+                if (!lblDisplay.Text.Contains("."))
                 {
-                    lblDisplay.Text = "0.";
-                }
-                else if (!lblDisplay.Text.Contains("."))
-                {
+                    // Append "." only if not already present
                     lblDisplay.Text += ".";
                 }
                 return;
             }
 
+            // Reset display if equals was just clicked
             if (isEqualsClicked)
             {
-                lblDisplay.Text = "";
-                txtBoxDisplayRecent.Clear();
+                lblDisplay.Text = "";  // Clear display for new input
+                txtBoxDisplayRecent.Clear();  // Also clear the recent display
                 isEqualsClicked = false;
             }
 
+            // Handle input after operator click
             if (isOperatorClicked)
             {
-                lblDisplay.Text = "";
+                lblDisplay.Text = "";  // Clear display for new operand
                 isOperatorClicked = false;
             }
 
+            // Default behavior for number inputs
             if (lblDisplay.Text == "0")
             {
-                lblDisplay.Text = input;
+                lblDisplay.Text = input;  // Replace "0" with the input number
             }
             else
             {
-                lblDisplay.Text += input;
+                lblDisplay.Text += input; // Append number to the display
             }
 
             isNumberClicked = true;
         }
+
+
         private void HandleNumberInput(KeyPressEventArgs e)
         {
             ProcessNumberInput(e.KeyChar.ToString());
@@ -118,6 +185,7 @@ namespace Calculator
         {
             RJButton btn = sender as RJButton;
             ProcessNumberInput(btn.Text);
+            HighlightButton(btn);  // Call highlight function
         }
 
         //refractor: OperationButton_Click and HandleOperatorInput -----------------------------|
@@ -161,6 +229,7 @@ namespace Calculator
             if (hasError) return; // Block input on error
             RJButton btn = sender as RJButton;
             ProcessOperatorInput(btn.Text);
+            HighlightButton(btn);  // Call highlight function
         }
 
         //refractor: HandleBackspace and HandLeftParenthesis -----------------------------------|
@@ -182,6 +251,7 @@ namespace Calculator
         }
         private void HandleBackspace()
         {
+            HighlightButton(btnBackspace);
             PerformBackspace();
         }
         private void btnBackspace_Click(object sender, EventArgs e)
@@ -344,6 +414,7 @@ namespace Calculator
         // AC (All Clear - on screen and keypress) ---------------------------------------------| 
         private void btnAC_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnAC);
             lblDisplay.Text = "0";
             txtBoxDisplayRecent.Text = "";
             hasError = false; // Reset the error state
@@ -387,7 +458,7 @@ namespace Calculator
             Application.Exit();
         }
 
-        
+
 
     }
 }

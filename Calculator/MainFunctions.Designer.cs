@@ -245,6 +245,8 @@
             this.btnLeftParenthesis.BorderRadius = 33;
             this.btnLeftParenthesis.BorderSize = 0;
             this.btnLeftParenthesis.FlatAppearance.BorderSize = 0;
+            this.btnLeftParenthesis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLeftParenthesis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLeftParenthesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLeftParenthesis.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnLeftParenthesis.ForeColor = System.Drawing.Color.Black;
@@ -267,6 +269,8 @@
             this.btnEquals.BorderRadius = 33;
             this.btnEquals.BorderSize = 0;
             this.btnEquals.FlatAppearance.BorderSize = 0;
+            this.btnEquals.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEquals.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEquals.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquals.ForeColor = System.Drawing.Color.Black;
@@ -289,6 +293,8 @@
             this.btnAddition.BorderRadius = 33;
             this.btnAddition.BorderSize = 0;
             this.btnAddition.FlatAppearance.BorderSize = 0;
+            this.btnAddition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAddition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddition.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.btnAddition.ForeColor = System.Drawing.Color.Black;
@@ -311,6 +317,8 @@
             this.btnSubtract.BorderRadius = 33;
             this.btnSubtract.BorderSize = 0;
             this.btnSubtract.FlatAppearance.BorderSize = 0;
+            this.btnSubtract.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSubtract.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubtract.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.btnSubtract.ForeColor = System.Drawing.Color.Black;
@@ -333,6 +341,8 @@
             this.btnMultiply.BorderRadius = 33;
             this.btnMultiply.BorderSize = 0;
             this.btnMultiply.FlatAppearance.BorderSize = 0;
+            this.btnMultiply.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnMultiply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMultiply.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.btnMultiply.ForeColor = System.Drawing.Color.Black;
@@ -355,6 +365,8 @@
             this.btnDivide.BorderRadius = 33;
             this.btnDivide.BorderSize = 0;
             this.btnDivide.FlatAppearance.BorderSize = 0;
+            this.btnDivide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDivide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDivide.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.btnDivide.ForeColor = System.Drawing.Color.Black;
@@ -378,6 +390,8 @@
             this.btnZero.BorderSize = 0;
             this.btnZero.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnZero.FlatAppearance.BorderSize = 0;
+            this.btnZero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnZero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZero.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnZero.ForeColor = System.Drawing.Color.Black;
@@ -401,6 +415,8 @@
             this.btnDot.BorderSize = 0;
             this.btnDot.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnDot.FlatAppearance.BorderSize = 0;
+            this.btnDot.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDot.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnDot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDot.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDot.ForeColor = System.Drawing.Color.Black;
@@ -424,6 +440,8 @@
             this.btnThree.BorderSize = 0;
             this.btnThree.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnThree.FlatAppearance.BorderSize = 0;
+            this.btnThree.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThree.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThree.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnThree.ForeColor = System.Drawing.Color.Black;
@@ -447,6 +465,8 @@
             this.btnTwo.BorderSize = 0;
             this.btnTwo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnTwo.FlatAppearance.BorderSize = 0;
+            this.btnTwo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnTwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTwo.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnTwo.ForeColor = System.Drawing.Color.Black;
@@ -470,6 +490,8 @@
             this.btnOne.BorderSize = 0;
             this.btnOne.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnOne.FlatAppearance.BorderSize = 0;
+            this.btnOne.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOne.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnOne.ForeColor = System.Drawing.Color.Black;
@@ -493,6 +515,8 @@
             this.btnSix.BorderSize = 0;
             this.btnSix.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnSix.FlatAppearance.BorderSize = 0;
+            this.btnSix.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSix.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSix.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnSix.ForeColor = System.Drawing.Color.Black;
@@ -516,6 +540,8 @@
             this.btnFive.BorderSize = 0;
             this.btnFive.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnFive.FlatAppearance.BorderSize = 0;
+            this.btnFive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnFive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFive.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnFive.ForeColor = System.Drawing.Color.Black;
@@ -539,6 +565,8 @@
             this.btnFour.BorderSize = 0;
             this.btnFour.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnFour.FlatAppearance.BorderSize = 0;
+            this.btnFour.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnFour.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFour.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnFour.ForeColor = System.Drawing.Color.Black;
@@ -562,6 +590,8 @@
             this.btnNine.BorderSize = 0;
             this.btnNine.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnNine.FlatAppearance.BorderSize = 0;
+            this.btnNine.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnNine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNine.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnNine.ForeColor = System.Drawing.Color.Black;
@@ -585,6 +615,8 @@
             this.btnEight.BorderSize = 0;
             this.btnEight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
             this.btnEight.FlatAppearance.BorderSize = 0;
+            this.btnEight.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEight.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnEight.ForeColor = System.Drawing.Color.Black;
@@ -607,6 +639,8 @@
             this.btnSeven.BorderRadius = 33;
             this.btnSeven.BorderSize = 0;
             this.btnSeven.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(173)))), ((int)(((byte)(41)))));
+            this.btnSeven.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSeven.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeven.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeven.ForeColor = System.Drawing.Color.Black;
@@ -629,6 +663,8 @@
             this.btnBackspace.BorderRadius = 33;
             this.btnBackspace.BorderSize = 0;
             this.btnBackspace.FlatAppearance.BorderSize = 0;
+            this.btnBackspace.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnBackspace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnBackspace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackspace.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnBackspace.ForeColor = System.Drawing.Color.Black;
@@ -651,6 +687,8 @@
             this.btnAC.BorderRadius = 33;
             this.btnAC.BorderSize = 0;
             this.btnAC.FlatAppearance.BorderSize = 0;
+            this.btnAC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAC.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnAC.ForeColor = System.Drawing.Color.Black;
@@ -674,6 +712,8 @@
             this.btnRightParenthesis.BorderSize = 0;
             this.btnRightParenthesis.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(197)))));
             this.btnRightParenthesis.FlatAppearance.BorderSize = 0;
+            this.btnRightParenthesis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnRightParenthesis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnRightParenthesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRightParenthesis.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnRightParenthesis.ForeColor = System.Drawing.Color.Black;

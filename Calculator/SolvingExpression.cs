@@ -73,8 +73,10 @@ namespace Calculator
         }
         private static bool IsDivisionByZero(string expression)
         {
-            return System.Text.RegularExpressions.Regex.IsMatch(expression, @"\/\s*(0(\.0*)?)");
+            // Matches division by exactly 0 or 0.0, 0.00, etc., but not values like 0.1, 0.15, etc.
+            return System.Text.RegularExpressions.Regex.IsMatch(expression, @"\/\s*0(\.0+)?(?=\s|$)");
         }
+
         public static bool AreParenthesesBalanced(string expression)
         {
             int balance = 0;
