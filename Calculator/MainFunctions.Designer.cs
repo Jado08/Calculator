@@ -228,10 +228,10 @@
             this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnHistory.ForeColor = System.Drawing.Color.Black;
             this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
-            this.btnHistory.Location = new System.Drawing.Point(258, 42);
+            this.btnHistory.Location = new System.Drawing.Point(264, 42);
             this.btnHistory.Margin = new System.Windows.Forms.Padding(0);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(47, 42);
+            this.btnHistory.Size = new System.Drawing.Size(46, 41);
             this.btnHistory.TabIndex = 45;
             this.btnHistory.TextColor = System.Drawing.Color.Black;
             this.btnHistory.UseVisualStyleBackColor = false;

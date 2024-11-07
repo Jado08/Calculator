@@ -114,7 +114,6 @@ namespace Calculator
             ProcessNumberInput(e.KeyChar.ToString());
             e.Handled = true;
         }
-
         private void NumberButton_Click(object sender, EventArgs e)
         {
             RJButton btn = sender as RJButton;
@@ -124,7 +123,6 @@ namespace Calculator
         //refractor: OperationButton_Click and HandleOperatorInput -----------------------------|
         private void ProcessOperatorInput(string input)
         {
-            if (hasError) return; // Block input on error
             if (lblDisplay.Text == "0.")
             {
                 lblDisplay.Text = "0";
