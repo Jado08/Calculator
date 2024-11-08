@@ -52,7 +52,6 @@ namespace Calculator
                         hasError = true;
                         return false;
                     }
-
                     lblDisplay.Text = decimalResult % 1 == 0 ? ((int)decimalResult).ToString() : decimalResult.ToString();
                 }
                 else

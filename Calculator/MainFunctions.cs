@@ -80,7 +80,6 @@ namespace Calculator
 
             e.Handled = true;
         }
-
         private RJButton GetButtonForKey(char keyChar)
         {
             switch (keyChar)
@@ -174,8 +173,6 @@ namespace Calculator
 
             isNumberClicked = true;
         }
-
-
         private void HandleNumberInput(KeyPressEventArgs e)
         {
             ProcessNumberInput(e.KeyChar.ToString());
@@ -457,8 +454,5 @@ namespace Calculator
         {
             Application.Exit();
         }
-
-
-
     }
 }
